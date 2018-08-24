@@ -1,18 +1,39 @@
-import React, { Component } from 'react';
-import { Avatar } from 'antd';
+import React, { Component } from "react";
+import { Avatar } from "antd";
+import PropTypes from "prop-types";
 
 export default class Comment extends Component {
-    render() {
-        return (
-            <li>
-                <div className="comment-avatar">
-                    <Avatar size={65} src={ this.props.avatar } />
-                </div>
-                <div className="comment-content">
-                    <span className="comment-meta"><span className="username">{ this.props.name }</span> on { this.props.time }</span>
-                    <p>{ this.props.content }</p>
-                </div>
-            </li>
-        );
-    }
+  static propTypes = {
+    avatar: PropTypes.string,
+    name: PropTypes.string,
+    time: PropTypes.string,
+    content: PropTypes.string
+  };
+
+  static defaultProps = {
+    avatar: "sdfasdf",
+    name: "sdfasdf",
+    time: "sdsfsasfsf",
+    content: "sdfadfasdf"
+  };
+
+  render() {
+    const { avatar, name, time, content } = this.props;
+
+    return (
+      <li>
+        <div className="comment-avatar">
+          <Avatar size={65} src={avatar} />
+        </div>
+        <div className="comment-content">
+          <span className="comment-meta">
+            <span className="username">{name}</span>
+            on
+            {time}
+          </span>
+          <p>{content}</p>
+        </div>
+      </li>
+    );
+  }
 }
