@@ -1,17 +1,11 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-import { Avatar, Icon } from "antd";
+import { Avatar, Icon, Tooltip } from "antd";
 import PropTypes from "prop-types";
 
-export default class Intro extends Component {
-  static defaultProps = {
-    name: "Huynh Duc Duy",
-    description: "Web Developer",
-    github: "http://github.com/huynhducduy",
-    linkedin: "https://www.linkedin.com/in/duc-duy-huynh-617a86152/",
-    facebook: "http://fb.com/huynhducduy"
-  };
+import { connect } from "react-redux";
 
+class Intro extends Component {
   static propTypes = {
     name: PropTypes.string,
     description: PropTypes.string,
@@ -21,7 +15,7 @@ export default class Intro extends Component {
   };
 
   render() {
-    const { name, description, github, linkedin, facebook } = this.props;
+    const { name, description, github, linkedin, facebook } = this.props.intro;
 
     return (
       <div className="intro">
@@ -35,29 +29,39 @@ export default class Intro extends Component {
           <div className="nav">
             <ul>
               <li>
-                <Link to="/">
-                  <Icon type="profile" />
-                </Link>
+                <Tooltip placement="top" title="Resume">
+                  <Link to="/">
+                    <Icon type="solution" />
+                  </Link>
+                </Tooltip>
               </li>
               <li>
-                <Link to="/blog">
-                  <Icon type="folder" />
-                </Link>
+                <Tooltip placement="top" title="Blog">
+                  <Link to="/blogs">
+                    <Icon type="copy" />
+                  </Link>
+                </Tooltip>
               </li>
               <li>
-                <a href={github}>
-                  <Icon type="github" />
-                </a>
+                <Tooltip placement="top" title="Github">
+                  <a href={github} target="_blank">
+                    <Icon type="github" />
+                  </a>
+                </Tooltip>
               </li>
               <li>
-                <a href={linkedin}>
-                  <Icon type="linkedin" />
-                </a>
+                <Tooltip placement="top" title="LinkedIn">
+                  <a href={linkedin} target="_blank">
+                    <Icon type="linkedin" />
+                  </a>
+                </Tooltip>
               </li>
               <li>
-                <a href={facebook}>
-                  <Icon type="facebook" />
-                </a>
+                <Tooltip placement="top" title="Facebook">
+                  <a href={facebook} target="_blank">
+                    <Icon type="facebook" />
+                  </a>
+                </Tooltip>
               </li>
             </ul>
           </div>
@@ -66,3 +70,7 @@ export default class Intro extends Component {
     );
   }
 }
+
+const mapStateToProps = state => state;
+
+export default connect(mapStateToProps)(Intro);

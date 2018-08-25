@@ -28,7 +28,7 @@ export default class Comment extends Component {
         <div className="comment-content">
           <span className="comment-meta">
             <span className="username">{name}</span>
-            on
+            &nbsp;on&nbsp;
             {time}
           </span>
           <p>{content}</p>
