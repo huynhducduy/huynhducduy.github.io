@@ -1,4 +1,4 @@
-import { REQUEST, SUCCESS, FAILURE } from "../../constraints/Blog/List";
+import { REQUEST, SUCCESS, FAILURE } from "../../constraints/Comment/List";
 
 const initialState = {
   data: null,

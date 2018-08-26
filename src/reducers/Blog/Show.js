@@ -1,32 +1,28 @@
-import {
-  SHOW_BLOG_REQUEST,
-  SHOW_BLOG_SUCCESS,
-  SHOW_BLOG_FAILURE
-} from "../../actions/Blog/Show";
+import { REQUEST, SUCCESS, FAILURE } from "../../constraints/Blog/Show";
 
 const initialState = {
-  data: {},
+  data: null,
   loading: false,
   error: null
 };
 
-export default function ShowBlogReducer(state = initialState, action) {
+export default (state = initialState, action) => {
   switch (action.type) {
-    case SHOW_BLOG_REQUEST:
+    case REQUEST:
       return {
         ...state,
         loading: true,
         error: null
       };
 
-    case SHOW_BLOG_SUCCESS:
+    case SUCCESS:
       return {
         ...state,
         loading: false,
         data: action.payload
       };
 
-    case SHOW_BLOG_FAILURE:
+    case FAILURE:
       return {
         ...state,
         loading: false,
@@ -37,4 +33,4 @@ export default function ShowBlogReducer(state = initialState, action) {
     default:
       return state;
   }
-}
+};

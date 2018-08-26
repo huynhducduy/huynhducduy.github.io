@@ -1,11 +1,13 @@
 import React, { Component } from "react";
 import "./styles/App.css";
 import { Row, Col, BackTop, Icon } from "antd";
-import { HashRouter as Router, Route } from "react-router-dom";
+import { HashRouter as Router, Route, Switch } from "react-router-dom";
+import Login from "./components/Login";
+import ListBlog from "./components/Blog/List";
+import CreateBlog from "./components/Blog/Create";
+import ShowBlog from "./components/Blog/Show";
 import Resume from "./components/Resume";
 import Intro from "./components/Intro";
-import ListBlog from "./components/Blog/List";
-import ShowBlog from "./components/Blog/Show";
 
 class App extends Component {
   render() {
@@ -21,10 +23,14 @@ class App extends Component {
             </Col>
             <Col lg={12}>
               <div>
-                <Route exact path="/" component={Resume} />
-                <Route exact path="/blogs" component={ListBlog} />
-                <Route exact path="/blogs/:page" component={ListBlog} />
-                <Route exact path="/blog/:id" component={ShowBlog} />
+                <Switch>
+                  <Route exact path="/login" component={Login} />
+                  <Route exact path="/blogs/:page" component={ListBlog} />
+                  <Route exact path="/blogs" component={ListBlog} />
+                  <Route exact path="/blog/create" component={CreateBlog} />
+                  <Route exact path="/blog/:id" component={ShowBlog} />
+                  <Route exact path="/" component={Resume} />
+                </Switch>
               </div>
             </Col>
           </Row>

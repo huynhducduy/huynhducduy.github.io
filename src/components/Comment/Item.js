@@ -1,8 +1,10 @@
 import React, { Component } from "react";
 import { Avatar } from "antd";
 import PropTypes from "prop-types";
+import md5 from "md5";
+import Moment from "react-moment";
 
-export default class Comment extends Component {
+export default class CommentItem extends Component {
   static propTypes = {
     avatar: PropTypes.string,
     name: PropTypes.string,
@@ -11,25 +13,29 @@ export default class Comment extends Component {
   };
 
   static defaultProps = {
-    avatar: "sdfasdf",
-    name: "sdfasdf",
-    time: "sdsfsasfsf",
-    content: "sdfadfasdf"
+    avatar: "https://html5template.website/dyon/img/comment/avatar01.jpg",
+    name: "Jean Pietro",
+    time: "August 20",
+    content:
+      "Morbi ut faucibus nulla, at fringilla est. Morbi lacinia sagittis purus."
   };
 
   render() {
-    const { avatar, name, time, content } = this.props;
+    const { name, time, content, email } = this.props;
 
     return (
       <li>
         <div className="comment-avatar">
-          <Avatar size={65} src={avatar} />
+          <Avatar
+            size={65}
+            src={`https://www.gravatar.com/avatar/${md5(email)}`}
+          />
         </div>
         <div className="comment-content">
           <span className="comment-meta">
             <span className="username">{name}</span>
             &nbsp;on&nbsp;
-            {time}
+            <Moment format="hh:mm A, MMM Do YYYY">{time}</Moment>
           </span>
           <p>{content}</p>
         </div>

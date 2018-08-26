@@ -1,39 +1,28 @@
-// import axios from "axios";
+import axios from "axios";
 
-export const LIST_BLOG_REQUEST = "LIST_BLOG_REQUEST";
-export const LIST_BLOG_SUCCESS = "LIST_BLOG_SUCCESS";
-export const LIST_BLOG_FAILURE = "LIST_BLOG_FAILURE";
+import config from "../../config";
+import { REQUEST, SUCCESS, FAILURE } from "../../constraints/Blog/List";
 
-export const listBlogRequest = () => ({
-  type: LIST_BLOG_REQUEST
+const request = () => ({
+  type: REQUEST
 });
 
-export const listBlogSuccess = listBlog => ({
-  type: LIST_BLOG_SUCCESS,
-  payload: listBlog
+const success = data => ({
+  type: SUCCESS,
+  payload: data
 });
 
-export const listBlogFailure = error => ({
-  type: LIST_BLOG_FAILURE,
+const failure = error => ({
+  type: FAILURE,
   payload: error
 });
 
-export const listBlog = (page, size) => {
-  return dispatch => {
-    dispatch(listBlogRequest());
-    fetch(`http://35.240.216.201:4000/api/v1/blogs?page=${page}&size=${size}`)
-      .then(handleErrors)
-      .then(res => res.json())
-      .then(res => {
-        dispatch(listBlogSuccess(res));
-      })
-      .catch(error => dispatch(listBlogFailure(error)));
-  };
+export default (page, size) => dispatch => {
+  dispatch(request());
+  axios
+    .get(`${config.api_base_url}/api/v1/blogs?page=${page}&size=${size}`)
+    .then(response => {
+      dispatch(success(response.data));
+    })
+    .catch(error => dispatch(failure(error)));
 };
-
-function handleErrors(response) {
-  if (!response.ok) {
-    throw Error(response.statusText);
-  }
-  return response;
-}

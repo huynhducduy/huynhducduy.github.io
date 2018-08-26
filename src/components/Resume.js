@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Tag, Timeline } from "antd";
 import { connect } from "react-redux";
-import {Helmet} from "react-helmet";
+import { Helmet } from "react-helmet";
 
 class Resume extends Component {
   render() {
@@ -55,7 +55,7 @@ class Resume extends Component {
         <h2># Information</h2>
         {listInformation}
         <h2># About</h2>
-        <div dangerouslySetInnerHTML={{__html: about}}></div>
+        <div dangerouslySetInnerHTML={{ __html: about }} />
         <h2># Skills</h2>
         <h3 className="for-tag">Front-end</h3>
         {listSkillFrontEnd}

@@ -1,10 +1,10 @@
-import React, { Component } from "react";
+import React, { PureComponent } from "react";
 import { Card } from "antd";
 import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 import Moment from "react-moment";
 
-class ItemBlog extends Component {
+class ListItemBlog extends PureComponent {
   static propTypes = {
     id: PropTypes.number,
     title: PropTypes.string,
@@ -39,4 +39,4 @@ class ItemBlog extends Component {
   }
 }
 
-export default ItemBlog;
+export default ListItemBlog;

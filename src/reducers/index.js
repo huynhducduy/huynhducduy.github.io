@@ -1,15 +1,17 @@
 import { combineReducers } from "redux";
 
-import resumeReducer from "./Resume";
-import introReducer from "./Intro";
-import listBlogReducer from "./Blog/List";
-import showBlogReducer from "./Blog/Show";
+import ResumeReducer from "./Resume";
+import IntroReducer from "./Intro";
+import { ListBlogReducer, ShowBlogReducer } from "./Blog";
+import { ListCommentReducer, CreateCommentReducer } from "./Comment";
 
 const reducers = combineReducers({
-  intro: introReducer,
-  resume: resumeReducer,
-  listBlog: listBlogReducer,
-  showBlog: showBlogReducer
+  intro: IntroReducer,
+  resume: ResumeReducer,
+  listBlog: ListBlogReducer,
+  showBlog: ShowBlogReducer,
+  listComment: ListCommentReducer,
+  createComment: CreateCommentReducer
 });
 
 export default reducers;
