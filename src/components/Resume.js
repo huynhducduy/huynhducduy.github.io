@@ -13,7 +13,8 @@ class Resume extends Component {
       skill_others,
       experience,
       education,
-      achievements
+      achievements,
+      projects
     } = this.props.data;
 
     const listInformation = Object.keys(information).map(key => (
@@ -38,6 +39,13 @@ class Resume extends Component {
       <Timeline.Item color="gray" className="education" key={education[key]}>
         {key}
         <p>{education[key]}</p>
+      </Timeline.Item>
+    ));
+
+    const listProjects = Object.keys(projects).map(key => (
+      <Timeline.Item color="gray" className="education" key={projects[key]}>
+        <span dangerouslySetInnerHTML={{ __html: key}}/>
+        <p>{projects[key]}</p>
       </Timeline.Item>
     ));
 
@@ -66,9 +74,11 @@ class Resume extends Component {
         <h2># Experience</h2>
         <p>{experience}</p>
         <h2># Education</h2>
-        <Timeline style={{ marginTop: "25px" }}>{listEducation}</Timeline>
+        <Timeline className="timeline-list">{listEducation}</Timeline>
+        <h2># Projects</h2>
+        <Timeline className="timeline-list">{listProjects}</Timeline>
         <h2># Achievements</h2>
-        <Timeline style={{ marginTop: "25px" }}>{listAchievements}</Timeline>
+        <Timeline className="timeline-list">{listAchievements}</Timeline>
       </div>
     );
   }
