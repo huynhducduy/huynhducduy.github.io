@@ -304,3 +304,28 @@ body {
 .timeline-list {
   margin-top: 25px;
 }
+
+.print-button {
+      position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.print-button button {
+  border-radius: 0 !important;
+  font-size: 22px;
+}
+
+@media print {
+  .nav {
+    display: none;
+  }
+
+  .ant-back-top {
+    display: none;
+  }
+
+  .print-button {
+    display: none;
+  }
+}

@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Tag, Timeline } from "antd";
+import { Tag, Timeline, Button } from "antd";
 import { connect } from "react-redux";
 import { Helmet } from "react-helmet";
 
@@ -57,6 +57,9 @@ class Resume extends Component {
 
     return (
       <div className="resume">
+        <div className="print-button">
+          <Button type="primary" icon="download" size="large" onClick={window.print}/>
+        </div>
         <Helmet>
           <title>Resume - Huynh Duc Duy</title>
         </Helmet>
