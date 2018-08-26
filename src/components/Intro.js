@@ -2,8 +2,8 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import { Avatar, Icon, Tooltip } from "antd";
 import PropTypes from "prop-types";
-
 import { connect } from "react-redux";
+import avatar from "../images/avatar.jpg";
 
 class Intro extends Component {
   static propTypes = {
@@ -20,10 +20,7 @@ class Intro extends Component {
     return (
       <div className="intro">
         <div>
-          <Avatar
-            size={160}
-            src="https://html5template.website/dyon/old/img/avatar.jpg"
-          />
+          <Avatar size={220} src={avatar} />
           <h1 className="name">{name}</h1>
           <p className="description">{description}</p>
           <div className="nav">
