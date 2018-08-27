@@ -4,7 +4,8 @@ export default () => ({
     "Day of birth": "November 15th, 1998",
     "Phone number": "(+84) 163 922 8306",
     Email: "duuuuuuuuy@gmail.com",
-    Skype: "live:duuuuuuuuy"
+    Skype: "live:duuuuuuuuy",
+    Address: "Quang Trung Software City, 12 District, HCMC"
   },
   about: `<p>I'm Huynh Duc Duy, a junior web developer with years of experience in programming, especially in web development, with knowledge of Web Design, UI/UX, Clean Code, RESTful API, Object-Oriented Programming & Functional Programming.</p>
     <p>Have a strong passionate in coding and learning things, I can easily acquire new knowledges, and speding most of free time self-study with online resources, courses, reading articles (99% of my knowledge come from the internet, recently learn and build app with React/Redux in 5 days)</p>
@@ -39,26 +40,39 @@ export default () => ({
   ],
   education: {
     "Software Engineering at FPT University, HCMC":
-      "Currently Junior with 100% 4-years Scholarship, 2017 - 2021",
+      "Currently Junior with 100% 4-years Scholarship, 2016 - 2020",
     "Information and Technology Major Class at Le Quy Don Gifted High School, Da Nang":
-      "Graduated, 2014 - 2017",
-    "Self-Learning on the Internet": "Taking online courses, research, reading aricles, making pet project, 2015 - Now and forever",
+      "Graduated, 2013 - 2016",
+    "Self-Learning on the Internet":
+      "Taking online courses, research, reading aricles, making pet project, 2015 - Now and forever",
     "": ""
   },
   projects: {
-    "<a target='_blank' href='https://github.com/huynhducduy/huynhducduy.github.io'>huynhducduy.github.io</a>": "Personal resume, blog and portfolio with ReactJS/Redux",
-    "<a target='_blank' href='https://github.com/smart-bots'>The SmartBots System</a>": "A cheap solution for smarthome, build on top of Laravel/MariaDB/Redis/NodeJS/JWT/Socket.io/Arduino",
-    "<a target='_blank' href='https://github.com/huynhducduy/sign-translater'>Sign Translater</a>":"IoT project - A glove can translate sign language into human sound",
-    "<a target='_blank' href='https://github.com/huynhducduy/smart-fan'>Smart Fan</a>":"IoT, a fan which can monitoring environmental conditions and users",
-    "<a target='_blank' href='https://github.com/huynhducduy/original-facebook-emoticon'>Original facebook emoticon</a>":"An extension bring back original facebook emoticon on chrome",
-    "<a target='_blank' href='https://github.com/huynhducduy/get-mp3'>Get Mp3</a>":"A simple alternative of cloud-based music service, allow to download lossless file",
-    "<a target='_blank' href='https://github.com/huynhducduy/statusFormater'>statusFormater</a>":"A Facebook and Twitter status formatting tool, Simply a unicode converter",
-    "<a target='_blank' href='https://github.com/huynhducduy/been2gether'>been2gether</a>":"Counting-day app for couples",
-    "<a target='_blank' href='https://github.com/huynhducduy/markdownPreview'>markdownPreview</a>":"Live markdown preview in javascript",
-    "<a target='_blank' href='https://github.com/huynhducduy/cfs'>cfs</a>":"Send and manage confessions with Laravel",
-    "<a target='_blank' href='https://github.com/huynhducduy/eLib'>eLib</a>":"A online service of library, provide borrow and return, preview books,...",
-    "<a target='_blank' href='https://github.com/huynhducduy/dekiemtra'>DeKiemTra</a>":"A Online storage of quiz, question and answer, built with pure PHP",
-    "":""
+    "<a target='_blank' href='https://github.com/huynhducduy/huynhducduy.github.io'>huynhducduy.github.io</a>":
+      "Personal resume, blog and portfolio with ReactJS/Redux",
+    "<a target='_blank' href='https://github.com/smart-bots'>The SmartBots System</a>":
+      "A cheap solution for smarthome, build on top of Laravel/MariaDB/Redis/NodeJS/JWT/Socket.io/Arduino",
+    "<a target='_blank' href='https://github.com/huynhducduy/sign-translater'>Sign Translater</a>":
+      "IoT project - A glove can translate sign language into human sound",
+    "<a target='_blank' href='https://github.com/huynhducduy/smart-fan'>Smart Fan</a>":
+      "IoT, a fan which can monitoring environmental conditions and users",
+    "<a target='_blank' href='https://github.com/huynhducduy/original-facebook-emoticon'>Original facebook emoticon</a>":
+      "An extension bring back original facebook emoticon on chrome",
+    "<a target='_blank' href='https://github.com/huynhducduy/get-mp3'>Get Mp3</a>":
+      "A simple alternative of cloud-based music service, allow to download lossless file",
+    "<a target='_blank' href='https://github.com/huynhducduy/statusFormater'>statusFormater</a>":
+      "A Facebook and Twitter status formatting tool, Simply a unicode converter",
+    "<a target='_blank' href='https://github.com/huynhducduy/been2gether'>been2gether</a>":
+      "Counting-day app for couples",
+    "<a target='_blank' href='https://github.com/huynhducduy/markdownPreview'>markdownPreview</a>":
+      "Live markdown preview in javascript",
+    "<a target='_blank' href='https://github.com/huynhducduy/cfs'>cfs</a>":
+      "Send and manage confessions with Laravel",
+    "<a target='_blank' href='https://github.com/huynhducduy/eLib'>eLib</a>":
+      "A online service of library, provide borrow and return, preview books,...",
+    "<a target='_blank' href='https://github.com/huynhducduy/dekiemtra'>DeKiemTra</a>":
+      "A Online storage of quiz, question and answer, built with pure PHP",
+    "": ""
   },
   achievements: [
     "3rd Place at Vifotec National 2017 with SmarBots Project",

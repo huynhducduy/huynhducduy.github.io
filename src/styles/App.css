@@ -301,14 +301,19 @@ body {
   margin: 50px;
 }
 
+.login input,
+.login button {
+  border-radius: 0;
+}
+
 .timeline-list {
   margin-top: 25px;
 }
 
 .print-button {
-      position: absolute;
-    top: 0;
-    right: 0;
+  position: absolute;
+  top: 0;
+  right: 0;
 }
 
 .print-button button {

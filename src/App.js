@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import "./styles/App.css";
 import { Row, Col, BackTop, Icon } from "antd";
 import { HashRouter as Router, Route, Switch } from "react-router-dom";
-import Login from "./components/Login";
+import Login from "./components/Auth/Login";
 import ListBlog from "./components/Blog/List";
 import CreateBlog from "./components/Blog/Create";
 import ShowBlog from "./components/Blog/Show";

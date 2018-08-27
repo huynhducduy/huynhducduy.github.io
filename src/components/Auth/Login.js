@@ -1,26 +1,39 @@
 import React, { Component } from "react";
-import { Form, Icon, Input, Button } from "antd";
+import { Form, Icon, Input, Button, Alert } from "antd";
 import { Helmet } from "react-helmet";
+import { bindActionCreators } from "redux";
+import { connect } from "react-redux";
+import LoginAuthAction from "../../actions/Auth/Login";
 
-const FormItem = Form.Item;
+class LoginAuth extends Component {
+  componentDidUpdate = () => {
+    if (this.props.data) {
+      localStorage.setItem("jwt", this.props.data.jwt);
+      localStorage.setItem("expires_at", this.props.data.expires_at);
+      localStorage.setItem("email", this.props.data.email);
+      localStorage.setItem("name", this.props.data.name);
+    }
+  };
 
-class Login extends Component {
   handleSubmit = e => {
     e.preventDefault();
     this.props.form.validateFields((err, values) => {
       if (!err) {
-        console.log("Received values of form: ", values);
+        this.props.LoginAuthAction(values.email, values.password);
       }
     });
   };
 
   render() {
     const { getFieldDecorator } = this.props.form;
+
+    const FormItem = Form.Item;
     return (
       <div className="login">
         <Helmet>
           <title>Login</title>
         </Helmet>
+        <h1>Provide indentity to continue</h1>
         <Form onSubmit={this.handleSubmit}>
           <FormItem>
             {getFieldDecorator("email", {
@@ -58,14 +71,40 @@ class Login extends Component {
             )}
           </FormItem>
           <FormItem>
-            <Button size="large" type="primary" htmlType="submit">
+            <Button
+              loading={this.props.loading}
+              block
+              size="large"
+              type="primary"
+              htmlType="submit"
+            >
               Log in
             </Button>
           </FormItem>
         </Form>
+        {this.props.error && (
+          <Alert type="error" message={this.props.error.message} banner />
+        )}
       </div>
     );
   }
 }
 
-export default Form.create()(Login);
+const mapStateToProps = state => ({
+  data: state.login.data,
+  loading: state.login.loading,
+  error: state.login.error
+});
+
+const mapDispatchToProps = dispatch =>
+  bindActionCreators(
+    {
+      LoginAuthAction
+    },
+    dispatch
+  );
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(Form.create()(LoginAuth));

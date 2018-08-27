@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Form, Input, Button, Icon } from "antd";
+import { Form, Input, Button, Icon, Alert } from "antd";
 import { bindActionCreators } from "redux";
 import { connect } from "react-redux";
 import CreateCommentAction from "../../actions/Comment/Create";
@@ -8,7 +8,10 @@ import ListCommentAction from "../../actions/Comment/List";
 class CreateComment extends Component {
   componentDidUpdate = () => {
     if (this.props.data) {
-      this.props.ListCommentAction(this.props.blogId);
+      this.props.form.resetFields();
+      localStorage.setItem("email", this.props.data.email);
+      localStorage.setItem("name", this.props.data.name);
+      this.props.ListCommentAction(this.props.data.blog_id);
     }
   };
 
@@ -16,9 +19,6 @@ class CreateComment extends Component {
     e.preventDefault();
     this.props.form.validateFields((err, values) => {
       if (!err) {
-        localStorage.setItem("email", values.email);
-        localStorage.setItem("name", values.name);
-        this.props.form.resetFields();
         this.props.CreateCommentAction(
           this.props.blogId,
           values.name,
@@ -34,51 +34,68 @@ class CreateComment extends Component {
     const { TextArea } = Input;
     const FormItem = Form.Item;
     return (
-      <Form onSubmit={this.handleSubmit}>
-        <FormItem>
-          {getFieldDecorator("name", {
-            rules: [{ required: true, message: "Please input your name!" }],
-            initialValue: localStorage.getItem("name")
-          })(
-            <Input
+      <div>
+        <Form onSubmit={this.handleSubmit}>
+          <FormItem>
+            {getFieldDecorator("name", {
+              rules: [{ required: true, message: "Please input your name!" }],
+              initialValue: localStorage.getItem("name")
+            })(
+              <Input
+                size="large"
+                prefix={
+                  <Icon type="user" style={{ color: "rgba(0,0,0,.25)" }} />
+                }
+                placeholder="Name"
+              />
+            )}
+          </FormItem>
+          <FormItem>
+            {getFieldDecorator("email", {
+              rules: [
+                { required: true, message: "Please input your email!" },
+                {
+                  type: "email",
+                  message: "The input is not valid E-mail!"
+                }
+              ],
+              initialValue: localStorage.getItem("email")
+            })(
+              <Input
+                size="large"
+                prefix={
+                  <Icon type="mail" style={{ color: "rgba(0,0,0,.25)" }} />
+                }
+                placeholder="Email"
+              />
+            )}
+          </FormItem>
+          <FormItem>
+            {getFieldDecorator("content", {
+              rules: [{ required: true, message: "Please input your comment!" }]
+            })(
+              <TextArea
+                placeholder="Comment"
+                autosize={{ minRows: 4, maxRows: 10 }}
+              />
+            )}
+          </FormItem>
+          <FormItem>
+            <Button
+              loading={this.props.loading}
+              block
+              type="primary"
               size="large"
-              prefix={<Icon type="user" style={{ color: "rgba(0,0,0,.25)" }} />}
-              placeholder="Name"
-            />
-          )}
-        </FormItem>
-        <FormItem>
-          {getFieldDecorator("email", {
-            rules: [
-              { required: true, message: "Please input your email!" },
-              {
-                type: "email",
-                message: "The input is not valid E-mail!"
-              }
-            ],
-            initialValue: localStorage.getItem("email")
-          })(
-            <Input
-              size="large"
-              prefix={<Icon type="mail" style={{ color: "rgba(0,0,0,.25)" }} />}
-              placeholder="Email"
-            />
-          )}
-        </FormItem>
-        <FormItem>
-          {getFieldDecorator("content", {
-            rules: [{ required: true, message: "Please input your comment!" }]
-          })(
-            <TextArea
-              placeholder="Comment"
-              autosize={{ minRows: 4, maxRows: 10 }}
-            />
-          )}
-        </FormItem>
-        <Button block size="large" htmlType="submit">
-          Comment
-        </Button>
-      </Form>
+              htmlType="submit"
+            >
+              Comment
+            </Button>
+          </FormItem>
+        </Form>
+        {this.props.error && (
+          <Alert type="error" message={this.props.error.message} banner />
+        )}
+      </div>
     );
   }
 }
