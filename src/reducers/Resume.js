@@ -1,7 +1,7 @@
 export default () => ({
   information: {
     "Full name": "Huynh Duc Duy",
-    "Day of birth": "November 15th, 1998",
+    "Day of birth": "January 2nd, 1999",
     "Phone number": "(+84) 163 922 8306",
     Email: "duuuuuuuuy@gmail.com",
     Skype: "live:duuuuuuuuy",
