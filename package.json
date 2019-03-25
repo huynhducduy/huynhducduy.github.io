@@ -37,5 +37,11 @@
     "eslint-plugin-react": "^7.12.4",
     "prettier": "^1.16.4",
     "prettier-eslint": "^8.8.2"
-  }
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
 }
