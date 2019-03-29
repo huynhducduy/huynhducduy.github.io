@@ -9,7 +9,7 @@ import ShowBlog from "./components/Blog/Show";
 import Resume from "./components/Resume";
 import Intro from "./components/Intro";
 
-class Apps extends Component {
+class App extends Component {
   render() {
     return (
       <Router>
