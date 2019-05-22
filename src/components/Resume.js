@@ -14,12 +14,13 @@ class Resume extends Component {
       experience,
       education,
       achievements,
-      projects
+      projects,
+      job
     } = this.props.data;
 
     const listInformation = Object.keys(information).map(key => (
       <p key={key}>
-        {key} : <b>{information[key]}</b>
+        {key}: <b>{information[key]}</b>
       </p>
     ));
 
@@ -35,6 +36,13 @@ class Resume extends Component {
       <Tag key={value}>{value}</Tag>
     ));
 
+    const listJob = Object.keys(job).map(key => (
+      <Timeline.Item color="gray" className="education" key={key}>
+        {job[key].position ? job[key].position + " at " + key + " (" + job[key].time + ")" : ""}
+        <span dangerouslySetInnerHTML={{ __html: job[key].details }} />
+      </Timeline.Item>
+    ))
+
     const listEducation = Object.keys(education).map(key => (
       <Timeline.Item color="gray" className="education" key={education[key]}>
         {key}
@@ -44,7 +52,7 @@ class Resume extends Component {
 
     const listProjects = Object.keys(projects).map(key => (
       <Timeline.Item color="gray" className="education" key={projects[key]}>
-        <span dangerouslySetInnerHTML={{ __html: key}}/>
+        <span dangerouslySetInnerHTML={{ __html: key }} />
         <p>{projects[key]}</p>
       </Timeline.Item>
     ));
@@ -58,7 +66,12 @@ class Resume extends Component {
     return (
       <div className="resume">
         <div className="print-button">
-          <Button type="primary" icon="download" size="large" onClick={window.print}/>
+          <Button
+            type="primary"
+            icon="download"
+            size="large"
+            onClick={window.print}
+          />
         </div>
         <Helmet>
           <title>Resume - Huynh Duc Duy</title>
@@ -76,6 +89,8 @@ class Resume extends Component {
         {listSkillOthers}
         <h2># Experience</h2>
         <p>{experience}</p>
+        <h2># Job</h2>
+        <Timeline className="timeline-list">{listJob}</Timeline>
         <h2># Education</h2>
         <Timeline className="timeline-list">{listEducation}</Timeline>
         <h2># Projects</h2>
