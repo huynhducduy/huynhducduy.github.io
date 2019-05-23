@@ -2,6 +2,6 @@ export default () => ({
   name: "Huynh Duc Duy",
   description: "Web Developer",
   github: "http://github.com/huynhducduy",
-  linkedin: "https://www.linkedin.com/in/duc-duy-huynh-617a86152/",
+  linkedin: "https://linkedin.com/in/huynhducduy/",
   facebook: "http://fb.com/huynhducduy"
 });
