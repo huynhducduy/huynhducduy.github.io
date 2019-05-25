@@ -1,7 +1,10 @@
 {
     "name": "huynhducduy",
     "version": "0.1.0",
-    "private": true,
+    "repository": {
+        "type": "git",
+        "url": "git@github.com:huynhducduy/huynhducduy.github.io.git"
+    },
     "dependencies": {
         "antd": "^3.18.2",
         "axios": "^0.18.0",
@@ -28,7 +31,8 @@
         "build": "react-scripts build",
         "fix": "prettier-eslint \"src/**/*.{js,jsx,json,ts}\"",
         "test": "react-scripts test --env=jsdom",
-        "eject": "react-scripts eject"
+        "eject": "react-scripts eject",
+        "refresh": "rm -rf node_modules && npm cache clean --force && rm -rf package-lock.json && npm i"
     },
     "devDependencies": {
         "eslint-config-airbnb": "^17.1.0",
