@@ -1,0 +1,26 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Development Mode",
+            "type": "chrome",
+            "request": "launch",
+            "url": "http://localhost:3000",
+            "webRoot": "${workspaceRoot}/src",
+            "sourceMapPathOverrides": {
+                "webpack:///src/*": "${webRoot}/*"
+            }
+        },
+        {
+            "name": "Test Mode",
+            "type": "node",
+            "request": "launch",
+            "runtimeExecutable": "${workspaceRoot}/node_modules/.bin/craco",
+            "args": ["test", "--runInBand", "--no-cache"],
+            "cwd": "${workspaceRoot}",
+            "protocol": "inspector",
+            "console": "integratedTerminal",
+            "internalConsoleOptions": "neverOpen"
+        }
+    ]
+}

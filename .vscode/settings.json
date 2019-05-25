@@ -1,0 +1,10 @@
+{
+    "editor.formatOnSave": true,
+    "editor.renderWhitespace": "all",
+    "files.insertFinalNewline": true,
+    "javascript.format.enable": true,
+    "javascript.implicitProjectConfig.checkJs": true,
+    "javascript.updateImportsOnFileMove.enabled": "always",
+    "prettier.eslintIntegration": true,
+    "eslint.autoFixOnSave": false
+}
