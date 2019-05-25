@@ -8,6 +8,7 @@
         "enzyme": "^3.9.0",
         "enzyme-adapter-react-16": "^1.13.1",
         "history": "^4.9.0",
+        "jest-enzyme": "^7.0.2",
         "md5": "^2.2.1",
         "moment": "^2.24.0",
         "prop-types": "^15.7.2",
