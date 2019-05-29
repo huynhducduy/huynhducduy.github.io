@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { PureComponent } from "react";
 
 import { Provider } from "react-redux";
 import { Row, Col, BackTop, Icon } from "antd";
@@ -16,9 +16,9 @@ import ShowBlog from "./components/Blog/Show";
 import Resume from "./components/Resume";
 import Intro from "./components/Intro";
 
-import "./styles/App.css";
+import "./App.css";
 
-class App extends Component {
+class App extends PureComponent {
     render() {
         return (
             <HelmetProvider>
