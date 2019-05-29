@@ -1,15 +1,23 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import { Provider } from "react-redux";
-import store from "./store";
+
+import * as serviceWorker from "./serviceWorker";
 import App from "./App";
-// import registerServiceWorker from "./registerServiceWorker";
 
-ReactDOM.render(
-    <Provider store={store}>
-        <App />
-    </Provider>,
-    document.getElementById("root")
-);
+function render() {
+    ReactDOM.render(<App />, document.getElementById("root"));
+}
 
-// registerServiceWorker();
+render();
+
+// Enable hot-module-replacement
+if (module.hot) {
+    module.hot.accept("./app", () => {
+        render();
+    });
+}
+
+// If you want your app to work offline and load faster, you can change
+// unregister() to register() below. Note this comes with some pitfalls.
+// Learn more about service workers: http://bit.ly/CRA-PWA
+serviceWorker.unregister();
