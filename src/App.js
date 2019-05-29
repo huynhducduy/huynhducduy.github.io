@@ -6,6 +6,7 @@ import { HashRouter as Router, Route, Switch } from "react-router-dom";
 
 import { IntlProvider } from "react-intl-redux";
 import { HelmetProvider } from "react-helmet-async";
+import LoadingBar from "plugins/loadingBar";
 import store from "./store";
 
 import Login from "./components/Auth/Login";
@@ -23,54 +24,57 @@ class App extends Component {
             <HelmetProvider>
                 <Provider store={store}>
                     <IntlProvider>
-                        <Router>
-                            <div>
-                                <BackTop>
-                                    <Icon type="up-circle" />
-                                </BackTop>
-                                <Row>
-                                    <Col lg={12}>
-                                        <Intro />
-                                    </Col>
-                                    <Col lg={12}>
-                                        <div>
-                                            <Switch>
-                                                <Route
-                                                    exact
-                                                    path="/login"
-                                                    component={Login}
-                                                />
-                                                <Route
-                                                    exact
-                                                    path="/blogs/:page"
-                                                    component={ListBlog}
-                                                />
-                                                <Route
-                                                    exact
-                                                    path="/blogs"
-                                                    component={ListBlog}
-                                                />
-                                                <Route
-                                                    exact
-                                                    path="/blog/create"
-                                                    component={CreateBlog}
-                                                />
-                                                <Route
-                                                    exact
-                                                    path="/blog/:id"
-                                                    component={ShowBlog}
-                                                />
-                                                <Route
-                                                    exact
-                                                    path="/"
-                                                    component={Resume}
-                                                />
-                                            </Switch>
-                                        </div>
-                                    </Col>
-                                </Row>
-                            </div>
-                        </Router>
+                        <>
+                            <LoadingBar />
+                            <Router>
+                                <div>
+                                    <BackTop>
+                                        <Icon type="up-circle" />
+                                    </BackTop>
+                                    <Row>
+                                        <Col lg={12}>
+                                            <Intro />
+                                        </Col>
+                                        <Col lg={12}>
+                                            <div>
+                                                <Switch>
+                                                    <Route
+                                                        exact
+                                                        path="/login"
+                                                        component={Login}
+                                                    />
+                                                    <Route
+                                                        exact
+                                                        path="/blogs/:page"
+                                                        component={ListBlog}
+                                                    />
+                                                    <Route
+                                                        exact
+                                                        path="/blogs"
+                                                        component={ListBlog}
+                                                    />
+                                                    <Route
+                                                        exact
+                                                        path="/blog/create"
+                                                        component={CreateBlog}
+                                                    />
+                                                    <Route
+                                                        exact
+                                                        path="/blog/:id"
+                                                        component={ShowBlog}
+                                                    />
+                                                    <Route
+                                                        exact
+                                                        path="/"
+                                                        component={Resume}
+                                                    />
+                                                </Switch>
+                                            </div>
+                                        </Col>
+                                    </Row>
+                                </div>
+                            </Router>
+                        </>
                     </IntlProvider>
                 </Provider>
             </HelmetProvider>
