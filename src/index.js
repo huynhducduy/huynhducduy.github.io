@@ -12,7 +12,7 @@ render();
 
 // Enable hot-module-replacement
 if (module.hot) {
-    module.hot.accept("./app", () => {
+    module.hot.accept("./App", () => {
         render();
     });
 }

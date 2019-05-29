@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Tag, Timeline, Button } from "antd";
 import { connect } from "react-redux";
-import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet-async";
 
 class Resume extends Component {
   render() {

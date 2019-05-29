@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Form, Icon, Input, Button, Alert } from "antd";
-import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet-async";
 import { bindActionCreators } from "redux";
 import { connect } from "react-redux";
 import LoginAuthAction from "../../actions/Auth/Login";
