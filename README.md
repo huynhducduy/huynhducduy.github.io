@@ -74,3 +74,5 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/tr
 - Unstated + Functional component + Hooks
 - Xstate?
 - GraphQL - Relay/Apollo
+- Eject/Config Webpack - Server-Side rendering
+- Config PWA - workbox/firebase
