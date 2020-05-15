@@ -7,7 +7,10 @@
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
     "bootstrap": "^4.4.1",
+    "enzyme": "^3.11.0",
+    "enzyme-adapter-react-16": "^1.15.2",
     "husky": "^4.2.5",
+    "jest-enzyme": "^7.1.2",
     "lint-staged": "^10.2.2",
     "node-sass": "^4.14.1",
     "prettier": "^2.0.5",
@@ -17,6 +20,7 @@
     "react-redux": "^7.2.0",
     "react-router-dom": "^5.1.2",
     "react-scripts": "3.4.1",
+    "react-test-renderer": "^16.13.1",
     "redux": "^4.0.5",
     "redux-devtools": "^3.5.0",
     "source-map-explorer": "^2.4.2"
