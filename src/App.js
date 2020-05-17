@@ -3,11 +3,27 @@ import './App.scss';
 import { Container, Row, Col, Image, Badge } from 'react-bootstrap';
 import avatar from './avatar.jpg';
 import Icon from '@mdi/react';
-import { mdiFile, mdiPost, mdiGithub, mdiLinkedin, mdiFacebook } from '@mdi/js';
+import {
+  mdiFile,
+  mdiPost,
+  mdiGithub,
+  mdiLinkedin,
+  mdiFacebook,
+  mdiFileDownload,
+} from '@mdi/js';
 
 function App() {
   return (
     <Container fluid>
+      <a
+        href="https://drive.google.com/open?id=1LxxZNtwre4JNhug3PIdICRPtxMaKJ7SM"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <div className="save-btn">
+          <Icon path={mdiFileDownload} size={2} />
+        </div>
+      </a>
       <Row>
         <Col md={12} lg={4} xl={5} className="left-col">
           <div>
