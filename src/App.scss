@@ -51,6 +51,14 @@ body {
     margin-top: -5px;
   }
 
+  .black {
+    color: #555;
+
+    :hover {
+      color: #000;
+    }
+  }
+
   .icons {
     @media print {
       display: none !important;
@@ -83,7 +91,7 @@ body {
 }
 
 .right-col {
-  padding: 20px;
+  padding: 30px;
 
   h1 {
     border-bottom: 1px solid #ddd;
@@ -93,6 +101,7 @@ body {
   p {
     font-weight: 200;
     line-height: 1.4;
+    font-size: 20px;
   }
 
   .skill-set {
@@ -102,5 +111,55 @@ body {
   span.badge {
     border: 1px solid #ccc;
     font-weight: 300;
+  }
+
+  ul.timeline {
+    list-style-type: none;
+    position: relative;
+    margin-left: -20px;
+    p {
+      font-size: 15px;
+    }
+    a {
+      font-size: 22px;
+    }
+    span {
+      font-size: 22px;
+    }
+  }
+
+  ul.timeline:before {
+    content: ' ';
+    background: #eee;
+    display: inline-block;
+    position: absolute;
+    top: 5px;
+    left: 29px;
+    width: 2px;
+    height: 100%;
+    z-index: 400;
+  }
+
+  ul.timeline > li {
+    margin: 10px 0;
+    padding-left: 10px;
+
+    .float-right {
+      margin-top: 5px;
+    }
+  }
+
+  ul.timeline > li:before {
+    content: ' ';
+    background: white;
+    display: inline-block;
+    position: absolute;
+    border-radius: 50%;
+    border: 3px solid #ccc;
+    margin-top: 5px;
+    left: 20px;
+    width: 20px;
+    height: 20px;
+    z-index: 400;
   }
 }

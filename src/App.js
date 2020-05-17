@@ -19,41 +19,70 @@ function App() {
               className="avatar"
             />
             <h1 className="name">Huynh Duc Duy</h1>
-            <a href="https://huynhducduy.me">
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://huynhducduy.me"
+            >
               <div className="website">huynhducduy.me</div>
             </a>
             <h2 className="title">Web Developer</h2>
             <div className="icons">
-              <div className="icon-block">
-                <div>
-                  <Icon path={mdiFile} size={2} />
+              <a rel="noopener noreferrer" href="/#/" className="black">
+                <div className="icon-block">
+                  <div>
+                    <Icon path={mdiFile} size={2} />
+                  </div>
+                  <span>Resume</span>
                 </div>
-                <span>Resume</span>
-              </div>
-              <div className="icon-block">
-                <div>
-                  <Icon path={mdiPost} size={2} />
+              </a>
+              <a rel="noopener noreferrer" href="/#/blog" className="black">
+                <div className="icon-block">
+                  <div>
+                    <Icon path={mdiPost} size={2} />
+                  </div>
+                  <span>Blog</span>
                 </div>
-                <span>Blog</span>
-              </div>
-              <div className="icon-block">
-                <div>
-                  <Icon path={mdiGithub} size={2} />
+              </a>
+              <a
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://www.linkedin.com/in/huynhducduy/"
+                className="black"
+              >
+                <div className="icon-block">
+                  <div>
+                    <Icon path={mdiLinkedin} size={2} />
+                  </div>
+                  <span>LinkedIn</span>
                 </div>
-                <span>Github</span>
-              </div>
-              <div className="icon-block">
-                <div>
-                  <Icon path={mdiLinkedin} size={2} />
+              </a>
+              <a
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://github.com/huynhducduy"
+                className="black"
+              >
+                <div className="icon-block">
+                  <div>
+                    <Icon path={mdiGithub} size={2} />
+                  </div>
+                  <span>Github</span>
                 </div>
-                <span>LinkedIn</span>
-              </div>
-              <div className="icon-block">
-                <div>
-                  <Icon path={mdiFacebook} size={2} />
+              </a>
+              <a
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://fb.com/huynhducduy"
+                className="black"
+              >
+                <div className="icon-block">
+                  <div>
+                    <Icon path={mdiFacebook} size={2} />
+                  </div>
+                  <span>Facebook</span>
                 </div>
-                <span>Facebook</span>
-              </div>
+              </a>
             </div>
           </div>
         </Col>
@@ -68,6 +97,9 @@ function App() {
             </p> */}
             <p>
               Phone number:&nbsp;<b>(+84) 339 228 306</b>
+            </p>
+            <p>
+              LinkedIn:&nbsp;<b>linkedin.com/in/huynhducduy/</b>
             </p>
             <p>
               Email:&nbsp;<b>huynhducduy219@gmail.com</b>
@@ -159,12 +191,78 @@ function App() {
           </div>
           <div>
             <h1># Work Experience</h1>
+            <ul class="timeline">
+              <li>
+                <span>Data Scientist Intern @&nbsp;</span>
+                <a
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href="https://www.knorex.com/"
+                >
+                  Knorex
+                </a>
+                <div class="float-right">Sep 2019 - Feb 2020</div>
+                <p>
+                  Working with Ads CTR (Click-Through Rate) Predictor
+                  <br />
+                  - Benchmark model with public datasets
+                  <br />
+                  - Re-procedure SotA model
+                  <br />
+                  - Tuning production model, apply experiment
+                  <br />
+                  - Analyze time-series CTR data, feature engineering...
+                  <br />
+                  Addition: Build a log monitor system consist of text classify,
+                  information extraction,...
+                  <br />
+                  <br />
+                  Team-size: 10+
+                </p>
+              </li>
+              <li>
+                <span>Front-End Engineer @&nbsp;</span>
+                <a
+                  href="https://www.weventure.global/"
+                  rel="noopener noreferrer"
+                >
+                  WeVenture
+                </a>
+                <div class="float-right">Aug 2018 - May 2019</div>
+                <p>
+                  Develop and migrate front-end services for various products,
+                  mostly video services and managements.
+                  <br />
+                  Focus on performance, security and maintainability to building
+                  app that scales.
+                  <br />
+                  <br />
+                  Using ES6 + React.js/Vue.js to build single-page web apps with
+                  server-side rendering via NodeJS.
+                  <br />
+                  Building code base with specific coding convention,
+                  tech-stack; maintaining, re-building/migrating legacy app.
+                  <br />
+                  <br />
+                  Stack: Go + gRPC, Ruby, MySQL, Redis, Node.js, React + Redux,
+                  Webpack + Babel, Vue.js, Docker + Kubernates, Git, Jenkins,
+                  Consul, RabbitMQ, Kafka, Kibana/ElasticSearch, Google Cloud
+                  Platform
+                  <br />
+                  <br />
+                  Team size: 10+
+                </p>
+              </li>
+            </ul>
           </div>
           <div>
             <h1># Volunteer Experience</h1>
           </div>
           <div>
             <h1># Education</h1>
+          </div>
+          <div>
+            <h1># Certifications</h1>
           </div>
           <div>
             <h1># Accomplishments</h1>
