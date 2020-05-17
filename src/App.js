@@ -260,9 +260,61 @@ function App() {
           </div>
           <div>
             <h1># Education</h1>
+            <ul class="timeline">
+              <li>
+                <span>Software Engineer @ FPT University</span>
+                <div class="float-right">2016 - 2020</div>
+                <p>Currently Junior, 100% Scholarship, GPA 3.5/4</p>
+              </li>
+              <li>
+                <span>
+                  IT Specialized Class @ Le Quy Don Gifted High School, Danang
+                </span>
+                <div class="float-right">2013 - 2016</div>
+                <p>Graduated, GPA 8.3/10</p>
+              </li>
+            </ul>
           </div>
           <div>
             <h1># Certifications</h1>
+            <ul class="timeline">
+              <li>
+                <span>
+                  <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href="datacamp.com/statement-of-accomplishment/track/00e161eb5eaa1d832db7de417372281d7a3a07d0"
+                  >
+                    Data Scientist
+                  </a>{' '}
+                  @ DataCamp
+                </span>
+              </li>
+              <li>
+                <span>
+                  <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href="https://www.datacamp.com/statement-of-accomplishment/track/b1b83c23605fb4e241ecf9039f052ad3eb00828e"
+                  >
+                    Data Analyst
+                  </a>{' '}
+                  @ DataCamp
+                </span>
+              </li>
+              <li>
+                <span>
+                  <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href="https://www.datacamp.com/statement-of-accomplishment/track/385798e0d801c7d77ff0f975efe1481e5f15ddac"
+                  >
+                    Python Programmer
+                  </a>{' '}
+                  @ DataCamp
+                </span>
+              </li>
+            </ul>
           </div>
           <div>
             <h1># Accomplishments</h1>
