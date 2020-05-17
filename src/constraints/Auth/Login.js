@@ -1,3 +1,0 @@
-export const REQUEST = "LOGIN_AUTH_REQUEST";
-export const SUCCESS = "LOGIN_AUTH_SUCCESS";
-export const FAILURE = "LOGIN_AUTH_FAILURE";

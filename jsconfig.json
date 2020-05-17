@@ -1,15 +1,11 @@
 {
-    "compilerOptions": {
-        "target": "ES6",
-        "module": "commonjs",
-        "jsx": "react",
-        "baseUrl": "src",
-        "allowSyntheticDefaultImports": true,
-        "paths": {
-            "#utils/*": ["utils/*"],
-            "#routes": ["routes.js"]
-        }
-    },
-    "include": ["src/**/*"],
-    "exclude": ["node_modules", "**/node_modules/*"]
+  "compilerOptions": {
+    "target": "ES6",
+    "module": "commonjs",
+    "jsx": "react",
+    "baseUrl": "src",
+    "allowSyntheticDefaultImports": true
+  },
+  "include": ["src/**/*"],
+  "exclude": ["node_modules", "**/node_modules/*"]
 }
