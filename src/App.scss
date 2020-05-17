@@ -52,6 +52,19 @@ body {
     font-weight: 200;
     text-align: center;
   }
+
+  .icons {
+    text-align: center;
+    .icon-block {
+      margin: 0 2px;
+      display: inline-block;
+    }
+
+    span {
+      display: block;
+      font-size: 10px;
+    }
+  }
 }
 
 @media (min-width: 991px) {

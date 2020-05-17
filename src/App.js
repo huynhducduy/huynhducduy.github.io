@@ -3,7 +3,7 @@ import './App.scss';
 import { Container, Row, Col, Image } from 'react-bootstrap';
 import avatar from './avatar.jpg';
 import Icon from '@mdi/react';
-import { mdiAccount } from '@mdi/js';
+import { mdiFile, mdiPost, mdiGithub, mdiLinkedin, mdiFacebook } from '@mdi/js';
 
 function App() {
   return (
@@ -20,14 +20,38 @@ function App() {
             />
             <h1 className="name">Huynh Duc Duy</h1>
             <h2 className="title">Web Developer</h2>
-            <Icon
-              path={mdiAccount}
-              size={1}
-              horizontal
-              vertical
-              rotate={90}
-              color="red"
-            />
+            <div className="icons">
+              <div className="icon-block">
+                <div>
+                  <Icon path={mdiFile} size={2} />
+                </div>
+                <span>Resume</span>
+              </div>
+              <div className="icon-block">
+                <div>
+                  <Icon path={mdiPost} size={2} />
+                </div>
+                <span>Blog</span>
+              </div>
+              <div className="icon-block">
+                <div>
+                  <Icon path={mdiGithub} size={2} />
+                </div>
+                <span>Github</span>
+              </div>
+              <div className="icon-block">
+                <div>
+                  <Icon path={mdiLinkedin} size={2} />
+                </div>
+                <span>LinkedIn</span>
+              </div>
+              <div className="icon-block">
+                <div>
+                  <Icon path={mdiFacebook} size={2} />
+                </div>
+                <span>Facebook</span>
+              </div>
+            </div>
           </div>
         </Col>
         <Col md={12} lg={8} xl={7} className="right-col">
