@@ -1,0 +1,61 @@
+@media print {
+  .nav {
+    display: none;
+  }
+
+  .ant-back-top {
+    display: none;
+  }
+
+  .print-button {
+    display: none;
+  }
+}
+
+.left-col {
+  background: #eee;
+  color: #444;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  min-height: 500px;
+
+  .div {
+    text-align: center;
+  }
+
+  .avatar {
+    display: block;
+    margin: auto;
+  }
+  .name {
+    display: block;
+    font-size: 40px;
+    font-weight: 300;
+    margin: 10px 0 0 0;
+    text-align: center;
+  }
+
+  .title {
+    display: block;
+    font-size: 22px;
+    font-weight: 200;
+    text-align: center;
+  }
+}
+
+@media (min-width: 991px) {
+  .left-col {
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    height: calc(
+      var(--vh, 1vh) * 100
+    ); /* correct sizing viewport units on mobile */
+  }
+}
+
+.right-col {
+  padding: 20px;
+}
