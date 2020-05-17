@@ -257,6 +257,73 @@ function App() {
           </div>
           <div>
             <h1># Volunteer Experience</h1>
+            <ul class="timeline">
+              <li>
+                <span>Software Engineer, DevOps @&nbsp;</span>
+                <a
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href="https://freecontest.xyz/"
+                >
+                  FreeContest
+                </a>
+                <div class="float-right">Jan 2020 - Present</div>
+                <p>
+                  Building a website, and monitor the server during the contest.
+                </p>
+              </li>
+              <li>
+                <span>Teaching Assistant @&nbsp;</span>
+                <a
+                  href="https://www.facebook.com/DevCVNInnovationChallenge/"
+                  rel="noopener noreferrer"
+                >
+                  Developer Circles from Facebook
+                </a>
+                <div class="float-right">Jul 2019 - Dec 2019</div>
+                <p>
+                  Teaching Assistant for DevC Innovation Challenge Vietnam -
+                  Batch 2 (HCMC) - Data Science Track
+                </p>
+              </li>
+              <li>
+                <span>Organizer @&nbsp;</span>
+                <a href="https://www.golang.org.vn/" rel="noopener noreferrer">
+                  Golang Vietnam Community
+                </a>
+                <div class="float-right">Nov 2018 - Dec 2019</div>
+                <p>Help organize GopherCon Vietnam 2018 in HCMC</p>
+              </li>
+              <li>
+                <span>Head of IT Department @&nbsp;</span>
+                <a href="https://fb.com/YCCLQD/" rel="noopener noreferrer">
+                  Young Creators Club
+                </a>
+                <div class="float-right">Sep 2015 - May 2017</div>
+                <p>
+                  A club for young creators in my high school. I joined the club
+                  from the very first day of me in high school, with my passion
+                  for science and a lot of contributing to club's event, I've
+                  been promoted to the head of IT department.
+                </p>
+              </li>
+              <li>
+                <span>Co-Founder @&nbsp;</span>
+                <a
+                  href="https://fb.com/lacacousticlqd/"
+                  rel="noopener noreferrer"
+                >
+                  Lac Acoustic Club
+                </a>
+                <div class="float-right">Sep 2016 - May 2017</div>
+                <p>
+                  An acoustic music club in my high school. I and my friends
+                  formed this club to have a place to play guitar, drums and
+                  share knowledge with each other, and perform some
+                  mini-concerts in my school.
+                </p>
+              </li>
+            </ul>
           </div>
           <div>
             <h1># Education</h1>
@@ -318,6 +385,98 @@ function App() {
           </div>
           <div>
             <h1># Projects</h1>
+            <ul class="timeline small">
+              <li>
+                <a
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href="https://github.com/smart-bots/about"
+                >
+                  The SmartBots System
+                </a>
+                <p>
+                  IoT project - cheap solution for smarthome, a network consists
+                  of multiple bots, helps people in control of electronics by
+                  attaching these bots onto the switch, button, plug,... instead
+                  of replaces them. Contest in many major competitions in
+                  Vietnam and won high prizes.
+                  <br />
+                  Built on top of Laravel, NodeJS, and Arduino, Intel Edison.
+                </p>
+              </li>
+              <li>
+                <a
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href="https://github.com/huynhducduy/smart-fan"
+                >
+                  Smart Fan
+                </a>
+                <p>
+                  A smart fan which can detect the presence of human around it
+                  to change the direction, also can collect data about the
+                  environment such as: temperature, humidity,... to
+                  automatically change the settings, remote control,...
+                </p>
+              </li>
+              <li>
+                <a
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href="https://github.com/huynhducduy/huynhducduy.github.io"
+                >
+                  Personal Website
+                </a>
+                <p>A personal website/blog built with React</p>
+              </li>
+              <li>
+                <a
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href="https://github.com/huynhducduy/task-management-app"
+                >
+                  Task Management App
+                </a>
+                <p>A task management app built with React-Native</p>
+              </li>
+              <li>
+                <a
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href="https://github.com/huynhducduy/promotion-management-api"
+                >
+                  Promotion Management & Analysis API
+                </a>
+                <p>An API for promotion management built with Golang</p>
+              </li>
+              <li>
+                <a
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href="https://github.com/huynhducduy/sign-translater"
+                >
+                  Sign Translator
+                </a>
+                <p>
+                  A glove can translate from sign language (the language of
+                  mute-people) to speech, built with Arduino.
+                </p>
+              </li>
+              <li>
+                <a
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href="https://github.com/huynhducduy/eLib"
+                >
+                  eLib
+                </a>
+                <p>
+                  An online library which can help students browses, rent book,
+                  help librarian manage books and much more. Built with PHP,
+                  Javascript - jQuery, Bootstrap
+                </p>
+              </li>
+            </ul>
           </div>
           <div>
             <h1># Accomplishments</h1>
