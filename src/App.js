@@ -135,8 +135,8 @@ function App() {
               knowledge come from the internet).
             </p>
             <p>
-              Can withstand high pressure with high self-consciousness and
-              patience to. I'm also a good team-player.
+              I can withstand high pressure with high self-consciousness and
+              patience. I'm also a good team-player.
             </p>
           </div>
           <div>
@@ -317,10 +317,93 @@ function App() {
             </ul>
           </div>
           <div>
-            <h1># Accomplishments</h1>
+            <h1># Projects</h1>
           </div>
           <div>
-            <h1># Projects</h1>
+            <h1># Accomplishments</h1>
+            <ul class="timeline small">
+              <li>
+                <span>Top 20 at Best Developer Vietnam 2019</span>
+              </li>
+              <li>
+                <span>Top 10 at Innovation Challenge Vietnam 2019</span>
+              </li>
+              <li>
+                <span>
+                  1st Place at Viet Nam Science and Engineering Fair (ViSEF)
+                  Regional 2017
+                </span>
+              </li>
+              <li>
+                <span>
+                  1st Place at Group D3, Young Information and Technology
+                  Regional 2017
+                </span>
+              </li>
+              <li>
+                <span>
+                  2nd Place at Group D3 - Young Information and Technology
+                  National 2017
+                </span>
+              </li>
+              <li>
+                <span>3rd Place (Bronze Medal) at Vifotec National 2017</span>
+              </li>
+              <li>
+                <span>3rd Place at Robodnic Da Nang 2017</span>
+              </li>
+              <li>
+                <span>3rd Place at Young Maker Challenger National 2017</span>
+              </li>
+              <li>
+                <span>
+                  3th Place at Group E3, Young Information and Technology
+                  Regional 2017
+                </span>
+              </li>
+              <li>
+                <span>
+                  1st Place at Group D3, Young Information and Technology
+                  National 2016
+                </span>
+              </li>
+              <li>
+                <span>
+                  1st Place at Group E3, Young Information and Technology
+                  Regional 2016
+                </span>
+              </li>
+              <li>
+                <span>
+                  2nd Place at Group C, Young Information and Technology
+                  Regional 2016
+                </span>
+              </li>
+              <li>
+                <span>2nd Place at Student Contest 2016</span>
+              </li>
+              <li>
+                <span>
+                  2nd Place at Viet Nam Science and Engineering Fair (ViSEF)
+                  Regional 2016
+                </span>
+              </li>
+              <li>
+                <span>
+                  3rd Place at Group E3, Young Information and Technology
+                  National 2016
+                </span>
+              </li>
+              <li>
+                <span>4th Place at Robodnic Da Nang 2016</span>
+              </li>
+              <li>
+                <span>
+                  2nd Place at Group D2, Young Information and Technology
+                  National 2015
+                </span>
+              </li>
+            </ul>
           </div>
         </Col>
       </Row>
