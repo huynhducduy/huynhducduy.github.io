@@ -9,12 +9,34 @@ import config from '../../config';
 
 export default function BlogList() {
   const [posts, setPosts] = useState([]);
+  const [last, setLast] = useState();
+  const [hasMore, setHasMore] = useState(false);
 
   useEffect(() => {
     axios.get(config.api + '/blog', {}).then(function (res) {
       setPosts(res.data);
+      if (res.data.length > 0) {
+        setLast(res.data[res.data.length - 1].id);
+        setHasMore(true);
+      } else {
+        setHasMore(false);
+      }
     });
   }, []);
+
+  function loadMore() {
+    axios
+      .get(config.api + '/blog', { params: { cursor: last } })
+      .then(function (res) {
+        setPosts(posts.concat(res.data));
+        if (res.data.length > 0) {
+          setLast(res.data[res.data.length - 1].id);
+          setHasMore(true);
+        } else {
+          setHasMore(false);
+        }
+      });
+  }
 
   return (
     <>
@@ -29,6 +51,7 @@ export default function BlogList() {
               description={post.description}
             />
           ))}
+          {hasMore ? <span onClick={loadMore}>Click to load more...</span> : ''}
         </Col>
       </Row>
     </>
