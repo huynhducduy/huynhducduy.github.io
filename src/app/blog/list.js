@@ -1,19 +1,30 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 
-import { Card, Button } from 'react-bootstrap';
+import { Row, Col } from 'react-bootstrap';
+import './blog.scss';
+import Post from './Post';
 
 export default function BlogList() {
+  const [posts, setPosts] = useState([]);
+
+  // useEffect(() => {
+  //   document.title = `You clicked ${count} times`;
+  // });
+
   return (
-    <Card style={{ width: '18rem' }}>
-      <Card.Img variant="top" src="holder.js/100px180" />
-      <Card.Body>
-        <Card.Title>Card Title</Card.Title>
-        <Card.Text>
-          Some quick example text to build on the card title and make up the
-          bulk of the card's content.
-        </Card.Text>
-        <Button variant="primary">Go somewhere</Button>
-      </Card.Body>
-    </Card>
+    <>
+      <Row className="blog">
+        <Col lg={12} md={6}>
+          <Post
+            id={1}
+            image="https://picsum.photos/200/300?random=1"
+            title="Neque porro quisquam est qui..."
+            time={1590378674}
+            description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin sed
+            felis in augue placerat congue."
+          />
+        </Col>
+      </Row>
+    </>
   );
 }
