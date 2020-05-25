@@ -1,6 +1,6 @@
 import React from 'react';
 import Icon from '@mdi/react';
-import { Col, Badge } from 'react-bootstrap';
+import { Badge } from 'react-bootstrap';
 import { mdiFileDownload } from '@mdi/js';
 
 export default function Resume() {

@@ -3,26 +3,32 @@ import React, { useState, useEffect } from 'react';
 import { Row, Col } from 'react-bootstrap';
 import './blog.scss';
 import Post from './Post';
+import axios from 'axios';
+
+import config from '../../config';
 
 export default function BlogList() {
   const [posts, setPosts] = useState([]);
 
-  // useEffect(() => {
-  //   document.title = `You clicked ${count} times`;
-  // });
+  useEffect(() => {
+    axios.get(config.api + '/blog', {}).then(function (res) {
+      setPosts(res.data);
+    });
+  }, []);
 
   return (
     <>
       <Row className="blog">
         <Col lg={12} md={6}>
-          <Post
-            id={1}
-            image="https://picsum.photos/200/300?random=1"
-            title="Neque porro quisquam est qui..."
-            time={1590378674}
-            description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin sed
-            felis in augue placerat congue."
-          />
+          {posts.map(post => (
+            <Post
+              id={post.id}
+              image={post.image}
+              title={post.title}
+              time={post.created_at}
+              description={post.description}
+            />
+          ))}
         </Col>
       </Row>
     </>
