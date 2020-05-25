@@ -51,7 +51,13 @@ export default function BlogList() {
               description={post.description}
             />
           ))}
-          {hasMore ? <span onClick={loadMore}>Click to load more...</span> : ''}
+          {hasMore ? (
+            <a alt="load more blog" onClick={loadMore} href="javascript:">
+              Click to load more...
+            </a>
+          ) : (
+            ''
+          )}
         </Col>
       </Row>
     </>

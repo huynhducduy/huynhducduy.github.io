@@ -48,14 +48,6 @@ export default function Resume() {
           UNIX/Linux environment.
         </p>
         <p>
-          Proficient in: Javascript/NodeJS/React, PHP/Laravel, HTML/CSS, SQL,
-          C++
-          <br />
-          Skilled and experienced in Java, C#/.Net, Arduino (Embedded System)
-          <br />
-          Familiar with: RESTful API, Service Worker, Docker, Jenkins,...
-        </p>
-        <p>
           Have a strong passion in coding and learning things, I can easily
           acquire new knowledge, and spending most of the spare time self-study
           with online resources, courses, articles (99% of my knowledge come
@@ -64,6 +56,13 @@ export default function Resume() {
         <p>
           I can withstand high pressure with high self-consciousness and
           patience. I'm also a good team-player.
+        </p>
+        <p>
+          (A little personal:) My biggest hobby is music. I listen (and sing
+          along) to music all the time, and I can play a bit of guitar, drum,
+          keyboard. I have my own Soundcloud (https://soundcloud.com/duyhd) so I
+          can upload all of my covers. Besides, I also like movies (watching and
+          making), photography, and travel.
         </p>
       </div>
       <div>
@@ -110,6 +109,10 @@ export default function Resume() {
           <Badge variant="light">sql</Badge>
           &nbsp;
           <Badge variant="light">mongodb</Badge>
+          &nbsp;
+          <Badge variant="light">docker</Badge>
+          &nbsp;
+          <Badge variant="light">CI/CD</Badge>
           &nbsp;
           <Badge variant="light">cloud services</Badge>
           &nbsp;
