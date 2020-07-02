@@ -42,10 +42,10 @@ export default function Resume() {
       <div>
         <h1># About</h1>
         <p>
-          A web developer with 2 years of experience in programming, especially
-          in web development. With knowledge of Web Design, UI/UX, Clean Code,
-          Data Structure & Algorithm, Networking, Maths. Familiar with
-          UNIX/Linux environment.
+          A web developer with experience in programming, especially in web
+          development, have knowledge in Web Design, UI/UX, Clean Code, Data
+          Structure & Algorithm, Networking, Maths. Familiar with UNIX/Linux
+          environment.
         </p>
         <p>
           Have a strong passion in coding and learning things, I can easily
@@ -56,13 +56,6 @@ export default function Resume() {
         <p>
           I can withstand high pressure with high self-consciousness and
           patience. I'm also a good team-player.
-        </p>
-        <p>
-          (A little personal:) My biggest hobby is music. I listen (and sing
-          along) to music all the time, and I can play a bit of guitar, drum,
-          keyboard. I have my own Soundcloud (https://soundcloud.com/duyhd) so I
-          can upload all of my covers. Besides, I also like movies (watching and
-          making), photography, and travel.
         </p>
       </div>
       <div>
@@ -185,6 +178,18 @@ export default function Resume() {
       <div>
         <h1># Volunteer Experience</h1>
         <ul class="timeline">
+          <li>
+            <span>Technical Mentor @&nbsp;</span>
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://freecontest.xyz/"
+            >
+              SheCodes Vietnam
+            </a>
+            <div class="float-right">Jun 2020 - Present</div>
+            <p>Orgranize & mentor at SheCodes Hackathon 2020</p>
+          </li>
           <li>
             <span>Software Engineer, DevOps @&nbsp;</span>
             <a
