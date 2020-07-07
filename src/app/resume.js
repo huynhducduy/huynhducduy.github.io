@@ -183,7 +183,7 @@ export default function Resume() {
             <a
               target="_blank"
               rel="noopener noreferrer"
-              href="https://freecontest.xyz/"
+              href="https://shecodesvietnam.tech/"
             >
               SheCodes Vietnam
             </a>
