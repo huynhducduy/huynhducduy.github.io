@@ -219,14 +219,6 @@ export default function Resume() {
             </p>
           </li>
           <li>
-            <span>Organizer @&nbsp;</span>
-            <a href="https://www.golang.org.vn/" rel="noopener noreferrer">
-              Golang Vietnam Community
-            </a>
-            <div class="float-right">Nov 2018 - Dec 2019</div>
-            <p>Help organize GopherCon Vietnam 2018 in HCMC</p>
-          </li>
-          <li>
             <span>Head of IT Department @&nbsp;</span>
             <a href="https://fb.com/YCCLQD/" rel="noopener noreferrer">
               Young Creators Club
