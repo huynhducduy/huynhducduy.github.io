@@ -1,11 +1,18 @@
 import loadableComponent from './utils/router/loadableComponent';
+import redirectComponent from './utils/router/redirectComponent';
 
 const errorPages = [];
 
 export default [
   {
-    name: 'resume',
+    name: 'home',
     path: '/',
+    component: redirectComponent('/blog'),
+    exact: true,
+  },
+  {
+    name: 'resume',
+    path: '/resume',
     component: loadableComponent(
       import('./app/resume' /* webpackChunkName: "resume" */)
     ),

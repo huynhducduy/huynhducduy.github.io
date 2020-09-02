@@ -8,6 +8,7 @@
 
     &:hover {
       box-shadow: 0 0 30px #ccc;
+      transform: translateY(-5px);
     }
 
     .thumbnail {
@@ -27,7 +28,7 @@
       .title {
         margin-top: 5px;
         font-size: 22px;
-        margin-bottom: 0;
+        margin-bottom: 8px;
       }
 
       .time {
@@ -39,6 +40,12 @@
       .description {
         font-size: 15px;
         margin-bottom: 5px;
+      }
+
+      .author {
+        font-size: 14px;
+        font-weight: 600;
+        color: #000;
       }
     }
   }

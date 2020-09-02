@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 
 import { Row, Col } from 'react-bootstrap';
-import './blog.scss';
+import './list.scss';
 import Post from './Post';
 import axios from 'axios';
 
@@ -9,34 +9,27 @@ import config from '../../config';
 
 export default function BlogList() {
   const [posts, setPosts] = useState([]);
-  const [last, setLast] = useState();
+  const [last, setLast] = useState(0);
   const [hasMore, setHasMore] = useState(false);
 
-  useEffect(() => {
-    axios.get(config.api + '/blog', {}).then(function (res) {
-      setPosts(res.data);
-      if (res.data.length > 0) {
-        setLast(res.data[res.data.length - 1].id);
-        setHasMore(true);
-      } else {
-        setHasMore(false);
-      }
-    });
-  }, []);
+  const loadMore = useCallback(
+    function () {
+      axios
+        .get(config.api + '/blog', { params: { cursor: last } })
+        .then(function (res) {
+          setPosts(p => p.concat(res.data));
+          if (res.data.length > 0) {
+            setLast(res.data[res.data.length - 1].id);
+            setHasMore(true);
+          } else {
+            setHasMore(false);
+          }
+        });
+    },
+    [last]
+  );
 
-  function loadMore() {
-    axios
-      .get(config.api + '/blog', { params: { cursor: last } })
-      .then(function (res) {
-        setPosts(posts.concat(res.data));
-        if (res.data.length > 0) {
-          setLast(res.data[res.data.length - 1].id);
-          setHasMore(true);
-        } else {
-          setHasMore(false);
-        }
-      });
-  }
+  useEffect(loadMore, []);
 
   return (
     <>
@@ -49,11 +42,12 @@ export default function BlogList() {
               title={post.title}
               time={post.created_at}
               description={post.description}
+              author={post.user}
             />
           ))}
           {hasMore ? (
             <a alt="load more blog" onClick={loadMore} href="javascript:">
-              Click to load more...
+              Load more...
             </a>
           ) : (
             ''

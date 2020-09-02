@@ -25,7 +25,7 @@ export default function Info() {
         </a>
         <h2 className="title">Web Developer</h2>
         <div className="icons">
-          <a rel="noopener noreferrer" href="/#/" className="black">
+          <a rel="noopener noreferrer" href="/#/resume" className="black">
             <div className="icon-block">
               <div>
                 <Icon path={mdiFile} size={2} />
