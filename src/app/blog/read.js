@@ -6,6 +6,7 @@ import formatRelative from 'date-fns/formatRelative';
 import fromUnixTime from 'date-fns/fromUnixTime';
 import { request } from 'utils/api/caller';
 import { useHistory } from 'react-router-dom';
+import isAuthenticated from 'utils/auth/isAuthenticated';
 
 export default function BlogRead({ match }) {
   const history = useHistory();
@@ -51,7 +52,7 @@ export default function BlogRead({ match }) {
       <Col>
         <div className="blog-post">
           <div className="image">
-            <img src={post.image} />
+            <img src={post.image} alt={post.title} />
           </div>
           <div className="title">{post.title}</div>
           <div className="author">{post.user?.name}</div>
@@ -73,10 +74,12 @@ export default function BlogRead({ match }) {
               ))}
           </div>
         </div>
-        <div style={{ float: 'right' }}>
-          <Button onClick={edit}>Edit</Button>&nbsp;
-          <Button onClick={del}>Delete</Button>
-        </div>
+        {isAuthenticated() && (
+          <div style={{ float: 'right' }}>
+            <Button onClick={edit}>Edit</Button>&nbsp;
+            <Button onClick={del}>Delete</Button>
+          </div>
+        )}
       </Col>
     </Row>
   );

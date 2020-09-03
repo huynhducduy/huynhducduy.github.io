@@ -101,9 +101,10 @@ const BlogEdit = ({ match }) => {
             </Form.Group>
             <Form.Group controlId="content">
               <Form.Control
+                rows={10}
                 as="textarea"
                 placeholder="Content"
-                name="Content"
+                name="content"
                 onChange={handleChange}
                 value={state.content}
               />
