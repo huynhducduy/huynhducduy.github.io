@@ -7,6 +7,7 @@ import fromUnixTime from 'date-fns/fromUnixTime';
 import { request } from 'utils/api/caller';
 import { useHistory } from 'react-router-dom';
 import isAuthenticated from 'utils/auth/isAuthenticated';
+import ReactMarkdown from 'react-markdown';
 
 export default function BlogRead({ match }) {
   const history = useHistory();
@@ -61,7 +62,9 @@ export default function BlogRead({ match }) {
               formatRelative(fromUnixTime(post.created_at), Date.now())}
           </div>
           <div className="description">{post.description}</div>
-          <div className="content">{post.content}</div>
+          <div className="content">
+            <ReactMarkdown source={post.content} />
+          </div>
           <div className="tags">
             {post.tags &&
               post.tags.split(',').map(tag => (

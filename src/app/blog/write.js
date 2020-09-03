@@ -4,10 +4,14 @@ import { Row, Col, Form, Button } from 'react-bootstrap';
 import { request } from 'utils/api/caller';
 import config from 'config';
 import slugify from 'slugify';
+import ReactMde from 'react-mde';
+import ReactMarkdown from 'react-markdown';
+import 'react-mde/lib/styles/css/react-mde-all.css';
 
 const BlogWrite = () => {
   const history = useHistory();
 
+  const [selectedTab, setSelectedTab] = useState('write');
   const [state, setState] = useState({
     title: '',
     description: '',
@@ -16,6 +20,13 @@ const BlogWrite = () => {
     content: '',
     tags: '',
   });
+
+  const setContentValue = useCallback(
+    function (value) {
+      setState({ ...state, content: value });
+    },
+    [state]
+  );
 
   const handleChange = useCallback(
     function (e) {
@@ -94,13 +105,19 @@ const BlogWrite = () => {
               />
             </Form.Group>
             <Form.Group controlId="content">
-              <Form.Control
-                rows={10}
-                as="textarea"
-                placeholder="Content"
-                name="content"
-                onChange={handleChange}
+              <ReactMde
                 value={state.content}
+                onChange={setContentValue}
+                selectedTab={selectedTab}
+                onTabChange={setSelectedTab}
+                generateMarkdownPreview={markdown =>
+                  Promise.resolve(<ReactMarkdown source={markdown} />)
+                }
+                childProps={{
+                  writeButton: {
+                    tabIndex: -1,
+                  },
+                }}
               />
             </Form.Group>
             <Form.Group controlId="tags">
