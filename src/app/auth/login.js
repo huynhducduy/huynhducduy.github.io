@@ -38,7 +38,7 @@ const Login = () => {
         .then(function (res) {
           authHelpers.setAccessToken(res.data.token);
           authHelpers.setAccessTokenExpiresAt(res.data.expires_at);
-          history.push('/#/blog');
+          history.push('/blog');
         })
         .catch(function (err) {
           alert(err.response.data.message);
