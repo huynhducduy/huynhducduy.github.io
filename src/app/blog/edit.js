@@ -72,15 +72,6 @@ const BlogEdit = ({ match }) => {
                 value={state.title}
               />
             </Form.Group>
-            <Form.Group controlId="description">
-              <Form.Control
-                as="textarea"
-                placeholder="Description"
-                name="description"
-                onChange={handleChange}
-                value={state.description}
-              />
-            </Form.Group>
             <Form.Group controlId="slug">
               <Form.Control
                 type="text"
@@ -88,6 +79,15 @@ const BlogEdit = ({ match }) => {
                 name="slug"
                 onChange={handleChange}
                 value={state.slug}
+              />
+            </Form.Group>
+            <Form.Group controlId="description">
+              <Form.Control
+                as="textarea"
+                placeholder="Description"
+                name="description"
+                onChange={handleChange}
+                value={state.description}
               />
             </Form.Group>
             <Form.Group controlId="image">

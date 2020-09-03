@@ -31,6 +31,7 @@
     "redux": "^4.0.5",
     "redux-devtools": "^3.5.0",
     "reselect": "^4.0.0",
+    "slugify": "^1.4.5",
     "source-map-explorer": "^2.4.2",
     "unstated-next": "^1.1.0"
   },

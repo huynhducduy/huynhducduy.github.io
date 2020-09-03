@@ -1,8 +1,9 @@
-import React, { useCallback, useState } from 'react';
+import React, { useCallback, useState, useEffect } from 'react';
 import { useHistory } from 'react-router-dom';
 import { Row, Col, Form, Button } from 'react-bootstrap';
 import { request } from 'utils/api/caller';
 import config from 'config';
+import slugify from 'slugify';
 
 const BlogWrite = () => {
   const history = useHistory();
@@ -41,6 +42,15 @@ const BlogWrite = () => {
     [history, state]
   );
 
+  const generateSlug = useCallback(function () {
+    setState(state => {
+      console.log(slugify(state.title));
+      return { ...state, slug: slugify(state.title).toLowerCase() };
+    });
+  }, []);
+
+  useEffect(generateSlug, [state.title]);
+
   return (
     <>
       <Row>
@@ -53,14 +63,7 @@ const BlogWrite = () => {
                 placeholder="Title"
                 name="title"
                 onChange={handleChange}
-              />
-            </Form.Group>
-            <Form.Group controlId="description">
-              <Form.Control
-                as="textarea"
-                placeholder="Description"
-                name="description"
-                onChange={handleChange}
+                value={state.title}
               />
             </Form.Group>
             <Form.Group controlId="slug">
@@ -69,6 +72,16 @@ const BlogWrite = () => {
                 placeholder="Slug"
                 name="slug"
                 onChange={handleChange}
+                value={state.slug}
+              />
+            </Form.Group>
+            <Form.Group controlId="description">
+              <Form.Control
+                as="textarea"
+                placeholder="Description"
+                name="description"
+                onChange={handleChange}
+                value={state.description}
               />
             </Form.Group>
             <Form.Group controlId="image">
@@ -77,14 +90,16 @@ const BlogWrite = () => {
                 placeholder="Image"
                 name="image"
                 onChange={handleChange}
+                value={state.image}
               />
             </Form.Group>
             <Form.Group controlId="content">
               <Form.Control
                 as="textarea"
                 placeholder="Content"
-                name="Content"
+                name="content"
                 onChange={handleChange}
+                value={state.content}
               />
             </Form.Group>
             <Form.Group controlId="tags">
@@ -93,6 +108,7 @@ const BlogWrite = () => {
                 placeholder="Tags"
                 name="tags"
                 onChange={handleChange}
+                value={state.tags}
               />
             </Form.Group>
             <Form.Group controlId="submit">
