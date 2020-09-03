@@ -22,7 +22,7 @@ Build image: `sudo docker build -t huynhducduy.github.io .`
 
 Run container: `sudo docker run -dit -p 3000:80 --name huynhducduy.github.io huynhducduy.github.io:latest`
 
-Kill and remove: `(sudo docker kill huynhducduy.github.io || true) && sudo docker rm huynhducduy.github.io`
+Kill and remove: `(sudo docker kill huynhducduy.github.io || true) && (sudo docker rm huynhducduy.github.io || true)`
 
 Without docker: `yarn build`, output is located at `/build`
 
