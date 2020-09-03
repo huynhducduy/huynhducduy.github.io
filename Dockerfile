@@ -33,8 +33,6 @@ CMD ["nginx", "-g", "daemon off;"]
 # Expose port
 EXPOSE 80
 
-# This is docker build command:
 # sudo docker build -t huynhducduy.github.io .
-
-# This is docker run command:
-# sudo docker run -dit -p 80:80 --name huynhducduy.github.io huynhducduy.github.io:latest
+# sudo docker run -dit -p 3000:80 --name huynhducduy.github.io huynhducduy.github.io:latest
+# (sudo docker kill huynhducduy.github.io || true) && sudo docker rm huynhducduy.github.io
