@@ -14,8 +14,6 @@ function defaultHeaders() {
   if (access_token !== null && !authHelpers.tokenIsExpired())
     headers.Authorization = `Bearer ${access_token}`;
 
-  console.log(headers);
-
   return headers;
 }
 

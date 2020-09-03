@@ -1,21 +1,45 @@
 import React, { useState, useEffect, useCallback } from 'react';
-import axios from 'axios';
 import './read.scss';
-import { Row, Col, Badge } from 'react-bootstrap';
+import { Row, Col, Badge, Button } from 'react-bootstrap';
 import config from '../../config';
 import formatRelative from 'date-fns/formatRelative';
 import fromUnixTime from 'date-fns/fromUnixTime';
+import { request } from 'utils/api/caller';
+import { useHistory } from 'react-router-dom';
 
 export default function BlogRead({ match }) {
+  const history = useHistory();
   const [post, setPost] = useState({});
 
   const load = useCallback(
     function () {
-      axios.get(config.api + '/blog/' + match.params.id).then(function (res) {
+      request({
+        method: 'GET',
+        to: config.api + '/blog/' + match.params.id,
+      }).then(function (res) {
         setPost(res.data);
       });
     },
     [match.params.id]
+  );
+
+  const edit = useCallback(
+    function () {
+      history.push('/blog/' + match.params.id + '/edit');
+    },
+    [history, match.params.id]
+  );
+
+  const del = useCallback(
+    function () {
+      request({
+        method: 'DELETE',
+        to: config.api + '/blog/' + match.params.id,
+      }).then(function (res) {
+        history.push('/blog');
+      });
+    },
+    [history, match.params.id]
   );
 
   useEffect(() => {
@@ -48,6 +72,10 @@ export default function BlogRead({ match }) {
                 </>
               ))}
           </div>
+        </div>
+        <div style={{ float: 'right' }}>
+          <Button onClick={edit}>Edit</Button>&nbsp;
+          <Button onClick={del}>Delete</Button>
         </div>
       </Col>
     </Row>
