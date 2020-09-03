@@ -116,6 +116,26 @@ export default function Resume() {
         <h1># Work Experience</h1>
         <ul class="timeline">
           <li>
+            <span>Software Engineer @&nbsp;</span>
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://be.com.vn/"
+            >
+              beGroup
+            </a>
+            <div class="float-right">Jul 2020 - Present</div>
+            <p>
+              Developing internal tools for QA, backend, DS, Media,... that help
+              every operation run as smoothly as possible and bring satisfaction
+              to everyone. Building a Design System that apply to all of be's
+              product ,and focus on UI/UX, animation,... to make it look fancy.
+              <br />
+              <br />
+              Using reactjs, vuejs, golang, postgreql,..
+            </p>
+          </li>
+          <li>
             <span>Data Scientist Intern @&nbsp;</span>
             <a
               target="_blank"
