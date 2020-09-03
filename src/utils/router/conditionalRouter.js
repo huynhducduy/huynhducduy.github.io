@@ -9,6 +9,7 @@ export default function ({
   reason,
   ...rest // pass directly to Route https://reacttraining.com/react-router/web/api/Route
 }) {
+  console.log('/#' + getRoute(redirectTo).path);
   return (
     <Route
       {...rest}
