@@ -51,7 +51,9 @@ export default function BlogList() {
                   Logout
                 </Button>
                 &nbsp;
-                <Button>Write</Button>
+                <Link to="/blog/write">
+                  <Button>Write</Button>
+                </Link>
               </div>
             </>
           ) : (

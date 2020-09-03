@@ -95,6 +95,7 @@ const BlogWrite = () => {
             </Form.Group>
             <Form.Group controlId="content">
               <Form.Control
+                rows={10}
                 as="textarea"
                 placeholder="Content"
                 name="content"
