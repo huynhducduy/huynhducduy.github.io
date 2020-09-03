@@ -11,8 +11,10 @@ function defaultHeaders() {
   headers['Content-Type'] = 'application/json';
 
   const access_token = authHelpers.getAccessToken();
-  if (access_token !== null && !authHelpers.tokenIsExpired)
+  if (access_token !== null && !authHelpers.tokenIsExpired())
     headers.Authorization = `Bearer ${access_token}`;
+
+  console.log(headers);
 
   return headers;
 }

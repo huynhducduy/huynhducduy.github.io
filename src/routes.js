@@ -27,6 +27,15 @@ export default [
     exact: true,
   },
   {
+    name: 'blog-write',
+    path: '/blog/write',
+    component: loadableComponent(
+      import('./app/blog/write' /* webpackChunkName: "blog-write" */)
+    ),
+    exact: true,
+    access_level: 'private',
+  },
+  {
     name: 'blog-read',
     path: '/blog/:id',
     component: loadableComponent(
@@ -42,15 +51,6 @@ export default [
     ),
     exact: true,
     access_level: 'protected',
-  },
-  {
-    name: 'blog-write',
-    path: '/blog/write',
-    component: loadableComponent(
-      import('./app/blog/write' /* webpackChunkName: "blog-write" */)
-    ),
-    exact: true,
-    access_level: 'private',
   },
   {
     name: 'auth-login',

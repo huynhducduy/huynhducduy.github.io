@@ -1,8 +1,9 @@
 import React from 'react';
 import avatar from '../assets/avatar.jpg';
 import Icon from '@mdi/react';
-import { Col, Image } from 'react-bootstrap';
+import { Col, Image, Button } from 'react-bootstrap';
 import { mdiFile, mdiPost, mdiGithub, mdiLinkedin, mdiFacebook } from '@mdi/js';
+import { isAuthenticated, clearAuth } from 'utils/auth';
 
 export default function Info() {
   return (

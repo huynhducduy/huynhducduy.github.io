@@ -6,7 +6,7 @@ export default function ({ component, ...rest }) {
   const config = {
     component,
     condition: isAuthenticated(),
-    redirectTo: 'login',
+    redirectTo: 'auth-login',
     reason: '',
     ...rest,
   };
