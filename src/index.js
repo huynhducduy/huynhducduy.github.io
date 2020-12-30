@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './app';
+import App from './App';
 import * as serviceWorker from './serviceWorker';
 
 function render() {
@@ -16,7 +16,7 @@ render();
 
 // Enable hot-module-replacement
 if (module.hot) {
-  module.hot.accept('./app', () => {
+  module.hot.accept('./App', () => {
     render();
   });
 }
