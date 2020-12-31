@@ -8,21 +8,22 @@ RUN apt-get update && \
   libnss3 \
   libxss1 \
   libasound2 \
-  xvfb
+  xvfb && \
+  apt-get clean && \
+  rm -rf /var/lib/apt/lists/*
 # Create working directory
 WORKDIR /app
 # Copy dependencies
 COPY ./package.json ./yarn.lock ./
 # Fetch dependencies
-RUN yarn
+RUN yarn install --pure-lockfile
 
 FROM develop AS build
 # Run build script
 COPY . .
 RUN yarn build
 
-
-FROM nginx:stable-alpine AS production
+FROM nginx:alpine AS production
 # Copy nginx config, project to machine
 COPY ./nginx.conf /etc/nginx/conf.d/default.conf
 COPY --from=build /app/build /app

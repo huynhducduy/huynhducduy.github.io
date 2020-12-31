@@ -1,7 +1,8 @@
 {
   "name": "huynhducduy.github.io",
   "version": "0.1.0",
-  "private": true,
+  "license": "SEE LICENSE IN LICENSE",
+  "private": false,
   "dependencies": {
     "@mdi/js": "^5.2.45",
     "@mdi/react": "^1.4.0",
@@ -12,12 +13,17 @@
     "date-fns": "^2.16.1",
     "enzyme": "^3.11.0",
     "enzyme-adapter-react-16": "^1.15.2",
+    "eslint-config-prettier": "^7.1.0",
+    "eslint-plugin-json": "^2.1.2",
+    "eslint-plugin-prettier": "^3.3.0",
     "husky": "^4.2.5",
     "jest-enzyme": "^7.1.2",
     "lint-staged": "^10.2.2",
     "node-sass": "^4.14.1",
+    "npm-run-all": "^4.1.5",
     "prettier": "^2.0.5",
     "react": "^17.0.1",
+    "react-bootstrap": "^1.4.0",
     "react-dom": "^17.0.1",
     "react-helmet": "^6.0.0",
     "react-markdown": "^4.3.1",
@@ -29,8 +35,18 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build && source-map-explorer 'build/static/js/*.js'",
+    "build": "react-scripts build",
+    "analyze": "source-map-explorer 'build/static/js/*.js'",
     "test": "react-scripts test",
+    "test:coverage": "yarn test --coverage=true --coverageReporters=cobertura --watchAll=false",
+    "test:debug": "react-scripts --inspect-brk test --runInBand --no-cache",
+    "refresh": "rm -rf node_modules && rm -rf yarn.lock && yarn cache clean && yarn",
+    "lint:code": "eslint 'src/**/*.{js,jsx,mjs,ts,tsx,json}'",
+    "lint:style": "prettier --check 'src/**/*.{scss,sass,css}'",
+    "lint": "run-p lint:*",
+    "fix:code": " eslint --fix 'src/**/*.{js,jsx,mjs,ts,tsx,json}'",
+    "fix:style": "prettier --write 'src/**/*.{scss,sass,css}'",
+    "fix": "run-p fix:*",
     "eject": "react-scripts eject"
   }
 }
