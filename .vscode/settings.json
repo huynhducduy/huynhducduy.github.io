@@ -1,3 +1,6 @@
 {
-    "cmake.configureOnOpen": false
+    "cmake.configureOnOpen": false,
+    "workbench.editor.enablePreviewFromQuickOpen": true,
+    "editor.linkedEditing": true,
+    "deepscan.enable": true
 }

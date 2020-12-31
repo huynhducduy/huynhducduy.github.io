@@ -20,9 +20,9 @@ export default function Resume() {
         <p>
           Full name:&nbsp;<b>Huynh Duc Duy</b>
         </p>
-        {/* <p>
-              Day of birth:&nbsp;<b>January 2nd, 1999</b>
-            </p> */}
+        <p>
+          Day of birth:&nbsp;<b>January 2nd, 1999</b>
+        </p>
         <p>
           Phone number:&nbsp;<b>(+84) 339 228 306</b>
         </p>
