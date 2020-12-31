@@ -1,4 +1,6 @@
-@import-normalize;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 @media print {
   a:link {
