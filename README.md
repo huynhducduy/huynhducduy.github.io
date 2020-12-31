@@ -1,6 +1,6 @@
 # Duy's simple blog & profile
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was based on [Create React App](https://github.com/facebook/create-react-app). [4.0.1 (2020-11-23))](https://github.com/facebook/create-react-app/blob/master/CHANGELOG.md)
 
 ## Configure
 
