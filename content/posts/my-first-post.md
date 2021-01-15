@@ -2,15 +2,15 @@
 title: "My First Post"
 thumbnail: "https://res.cloudinary.com/indysigner/image/fetch/f_auto,q_auto/w_1600/https://cloud.netlifyusercontent.com/assets/344dbf88-fdf9-42bb-adb4-46f01eedd629/e845f3aa-57e2-4103-a771-0a094699e98d/1-web-design-trends-report-2021.png"
 date: 2021-01-12T23:49:08+07:00
-draft: false
+draft: true
 tags:
-- Algorithms
+- algorithms
 categories:
 - notes
 keywords:
-    - Algorithms
-    - String
-    - radix sort
+- algorithms
+- string
+- radix sort
 description: "You have a to-do list that scrolls on for days. You are managing multiple projects, getting lots of email and messages on different messaging systems?"
 ---
 
