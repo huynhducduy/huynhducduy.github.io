@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on Duy&#39;s Notes</title>
+    <link>https://huynhducduy.me/tags/</link>
+    <description>Recent content in Tags on Duy&#39;s Notes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Huynh Duc Duy</copyright>
+    <lastBuildDate>Fri, 15 Jan 2021 23:49:08 +0700</lastBuildDate><atom:link href="https://huynhducduy.me/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>dotfiles</title>
+      <link>https://huynhducduy.me/tags/dotfiles/</link>
+      <pubDate>Fri, 15 Jan 2021 23:49:08 +0700</pubDate>
+      
+      <guid>https://huynhducduy.me/tags/dotfiles/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>macos</title>
+      <link>https://huynhducduy.me/tags/macos/</link>
+      <pubDate>Fri, 15 Jan 2021 23:49:08 +0700</pubDate>
+      
+      <guid>https://huynhducduy.me/tags/macos/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>shell</title>
+      <link>https://huynhducduy.me/tags/shell/</link>
+      <pubDate>Fri, 15 Jan 2021 23:49:08 +0700</pubDate>
+      
+      <guid>https://huynhducduy.me/tags/shell/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>software</title>
+      <link>https://huynhducduy.me/tags/software/</link>
+      <pubDate>Fri, 15 Jan 2021 23:49:08 +0700</pubDate>
+      
+      <guid>https://huynhducduy.me/tags/software/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>terminal</title>
+      <link>https://huynhducduy.me/tags/terminal/</link>
+      <pubDate>Fri, 15 Jan 2021 23:49:08 +0700</pubDate>
+      
+      <guid>https://huynhducduy.me/tags/terminal/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
