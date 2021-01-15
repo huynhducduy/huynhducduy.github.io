@@ -1,7 +1,7 @@
 baseURL = "https://huynhducduy.me"
 languageCode = "en-us"
 title = "Duy's Notes"
-theme = "cactus"
+theme = "cactus-modified"
 copyright = "Huynh Duc Duy"
 disqusShortname = "huynhducduy"
 googleAnalytics = "G-7F7YD46FJ8"

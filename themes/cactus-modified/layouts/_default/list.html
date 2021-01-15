@@ -1,0 +1,28 @@
+{{ define "main"}}
+<div id="archive">
+  <ul class="post-list">
+  {{ range (sort .Paginator.Pages "Date" "desc") }}
+    {{ $pageYear := (.Date.Format "2006") }}
+    {{ if (ne $pageYear ($.Scratch.Get "year")) }}
+    {{ $.Scratch.Set "year" $pageYear }}
+    <h2>{{ $pageYear }}</h2>
+    {{ end }}
+    <li class="post-item">
+      <div class="meta">
+				<img src={{ .Params.Thumbnail }} class='thumbnail' />
+			</div>
+			<div>
+				<span>
+					<time datetime="{{ time .Date }}" itemprop="datePublished" class='time'>{{ .Date.Format (.Site.Params.dateFormat | default "2006-01-02") }}</time><br/>
+					<a href="{{ .Permalink }}" class='title'>{{ if .Title }} {{- .Title -}} {{ else }} {{- print "Untitled" -}}{{ end }}</a><br/>
+					<span class="description">
+						{{ .Description }}
+					</span>
+				</span>
+			</div>
+    </li>
+    {{ end }}
+  </ul>
+  {{ partial "pagination.html" . }}
+</div>
+{{ end }}
