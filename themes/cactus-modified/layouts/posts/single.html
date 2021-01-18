@@ -8,7 +8,9 @@
 
   <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
     <header>
-			<img src={{ .Params.Thumbnail }} class='thumbnail' />
+			{{ if .Params.Thumbnail }}
+			<img src={{ .Params.Thumbnail | absURL  }} class='thumbnail' />
+			{{ end }}
       <h1 class="posttitle" itemprop="name headline">
         {{ .Title }}
       </h1>

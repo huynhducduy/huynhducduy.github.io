@@ -1,6 +1,6 @@
 ---
 title: "Fresh macOS installation: From 0% to 100% ready for development in just a glance"
-thumbnail: "https://images.unsplash.com/photo-1474403078171-7f199e9d1335?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=3302&q=80"
+thumbnail: "/images/fresh-macos-install/thumbnail.jpeg"
 date: 2021-01-15T23:49:08+07:00
 draft: false
 tags:
