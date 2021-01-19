@@ -31,7 +31,7 @@
 	
 	<link rel="preconnect" href="https://fonts.gstatic.com">
 	<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://huynhducduy.me/css/style-white.css">
+  <link rel="stylesheet" href="https://huynhducduy.me/css/style-dark.css">
   
    <link rel="stylesheet" href="https://huynhducduy.me/css/custom.css"> 
   
@@ -279,142 +279,307 @@ if (!doNotTrack) {
 <h3 id="homebrew">Homebrew</h3>
 <p>Don&rsquo;t tell me that you don&rsquo;t know this name? The most famous package manager for macOS. Homebrew is the most important piece.</p>
 <p>To install homebrew, you gotta have &ldquo;Command Line Tools (CLT) for Xcode&rdquo; first:</p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">xcode-select --install
-</code></pre></div><p>Then install homebrew with:</p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">/bin/bash -c <span style="color:#d88200">&#34;</span><span style="color:#00a8c8">$(</span>curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh<span style="color:#00a8c8">)</span><span style="color:#d88200">&#34;</span>
-</code></pre></div><p>We are going to use <code>Homebrew bundle</code>, which let us install pretty much everything else, with just a <code>Brewfile</code> and a single command.</p>
+<div class="highlight"><div style="color:#8a8a8a;background-color:#1c1c1c;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#8a8a8a;background-color:#1c1c1c;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#454545">1
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="color:#8a8a8a;background-color:#1c1c1c;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">xcode-select --install
+</code></pre></td></tr></table>
+</div>
+</div><p>Then install homebrew with:</p>
+<div class="highlight"><div style="color:#8a8a8a;background-color:#1c1c1c;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#8a8a8a;background-color:#1c1c1c;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#454545">1
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="color:#8a8a8a;background-color:#1c1c1c;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">/bin/bash -c <span style="color:#00afaf">&#34;</span><span style="color:#5f8700">$(</span>curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh<span style="color:#5f8700">)</span><span style="color:#00afaf">&#34;</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>We are going to use <code>Homebrew bundle</code>, which let us install pretty much everything else, with just a <code>Brewfile</code> and a single command.</p>
 <p>And yes you&rsquo;re right, I do have my own <code>Brewfile</code> and you can use it. Check it out <a href="https://github.com/huynhducduy/dotfiles/blob/master/Brewfile">here</a>
 But before, you may want to <strong>login to &ldquo;App Store&rdquo;</strong> first, because with brew, you can even install app from App Store without manually click by yourself.</p>
 <p>Now download my <code>Brewfile</code> and let the party (the installation) begin:</p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">curl https://raw.githubusercontent.com/huynhducduy/dotfiles/master/Brewfile -s -o Brewfile
+<div class="highlight"><div style="color:#8a8a8a;background-color:#1c1c1c;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#8a8a8a;background-color:#1c1c1c;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#454545">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#454545">2
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="color:#8a8a8a;background-color:#1c1c1c;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">curl https://raw.githubusercontent.com/huynhducduy/dotfiles/master/Brewfile -s -o Brewfile
 brew bundle install
-</code></pre></div><p>Or you can create your own <code>Brewfile</code>. Let take a look at what is in mine:</p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">tap <span style="color:#d88200">&#34;homebrew/bundle&#34;</span>
-tap <span style="color:#d88200">&#34;homebrew/cask&#34;</span>
-tap <span style="color:#d88200">&#34;homebrew/cask-drivers&#34;</span>
-tap <span style="color:#d88200">&#34;homebrew/cask-fonts&#34;</span>
-tap <span style="color:#d88200">&#34;homebrew/cask-versions&#34;</span>
-tap <span style="color:#d88200">&#34;homebrew/core&#34;</span>
-tap <span style="color:#d88200">&#34;homebrew/services&#34;</span>
-tap <span style="color:#d88200">&#34;homebrew/test-bot&#34;</span>
-tap <span style="color:#d88200">&#34;rigellute/tap&#34;</span> <span style="color:#75715e"># These are &#39;tap&#39;, used to extend the formulae of homebrew</span>
-brew <span style="color:#d88200">&#34;autojump&#34;</span> <span style="color:#75715e"># A &#39;cd&#39; command that help you jump quickly to your desired location</span>
-brew <span style="color:#d88200">&#34;bandwhich&#34;</span> <span style="color:#75715e"># Monitor current network utilization</span>
-brew <span style="color:#d88200">&#34;broot&#34;</span> <span style="color:#75715e"># A replacement for treeview, search, ls, cs,….</span>
-brew <span style="color:#d88200">&#34;coreutils&#34;</span> <span style="color:#75715e"># Linux core utilities, because macos utilities have slightly different with linux in syntax,...</span>
-brew <span style="color:#d88200">&#34;croc&#34;</span> <span style="color:#75715e"># P2P file-transfer tool</span>
-brew <span style="color:#d88200">&#34;gnutls&#34;</span> <span style="color:#75715e"># GNU TLS</span>
-brew <span style="color:#d88200">&#34;ffmpeg&#34;</span> <span style="color:#75715e"># Playing with audio, video</span>
-brew <span style="color:#d88200">&#34;findutils&#34;</span> <span style="color:#75715e"># GNU find, xargs, and locate</span>
-brew <span style="color:#d88200">&#34;fzf&#34;</span> <span style="color:#75715e"># Fuzzy finder, play well with various of other tools</span>
-brew <span style="color:#d88200">&#34;gawk&#34;</span> <span style="color:#75715e"># GNU awk</span>
-brew <span style="color:#d88200">&#34;git&#34;</span>
-brew <span style="color:#d88200">&#34;git-lfs&#34;</span> <span style="color:#75715e"># Store large files on git</span>
-brew <span style="color:#d88200">&#34;gnu-getopt&#34;</span> <span style="color:#75715e"># Linux util</span>
-brew <span style="color:#d88200">&#34;gnu-indent&#34;</span> <span style="color:#75715e"># Linux util</span>
-brew <span style="color:#d88200">&#34;gnu-sed&#34;</span> <span style="color:#75715e"># Linux util</span>
-brew <span style="color:#d88200">&#34;gnu-tar&#34;</span> <span style="color:#75715e"># Linux util</span>
-brew <span style="color:#d88200">&#34;gnupg&#34;</span> <span style="color:#75715e"># Support for GPG</span>
-brew <span style="color:#d88200">&#34;go&#34;</span>
-brew <span style="color:#d88200">&#34;gradle&#34;</span>
-brew <span style="color:#d88200">&#34;grep&#34;</span> <span style="color:#75715e"># GNU grep, egrep and fgrep</span>
-brew <span style="color:#d88200">&#34;hstr&#34;</span>
-brew <span style="color:#d88200">&#34;htop&#34;</span> <span style="color:#75715e"># Improved &#39;top&#39;</span>
-brew <span style="color:#d88200">&#34;hugo&#34;</span>
-brew <span style="color:#d88200">&#34;imagemagick&#34;</span>
-brew <span style="color:#d88200">&#34;libpq&#34;</span>
-brew <span style="color:#d88200">&#34;mas&#34;</span> <span style="color:#75715e"># Support for install app store app with cli</span>
-brew <span style="color:#d88200">&#34;moreutils&#34;</span> <span style="color:#75715e"># More UNIX util</span>
-brew <span style="color:#d88200">&#34;neofetch&#34;</span> <span style="color:#75715e"># Display os info</span>
-brew <span style="color:#d88200">&#34;nmap&#34;</span> <span style="color:#75715e"># Port scaning</span>
-brew <span style="color:#d88200">&#34;nvm&#34;</span>
-brew <span style="color:#d88200">&#34;spotify-tui&#34;</span> <span style="color:#75715e"># Spotify in terminal</span>
-brew <span style="color:#d88200">&#34;spotifyd&#34;</span> <span style="color:#75715e"># Spotify daemon</span>
-brew <span style="color:#d88200">&#34;sqlmap&#34;</span> <span style="color:#75715e"># Scaning for SQL Injection</span>
-brew <span style="color:#d88200">&#34;tldr&#34;</span> <span style="color:#75715e"># Improved &#39;man&#39;</span>
-brew <span style="color:#d88200">&#34;tmux&#34;</span>
-brew <span style="color:#d88200">&#34;tokei&#34;</span> <span style="color:#75715e"># Count code</span>
-brew <span style="color:#d88200">&#34;wget&#34;</span>
-brew <span style="color:#d88200">&#34;wifi-password&#34;</span>
-cask <span style="color:#d88200">&#34;alacritty&#34;</span> <span style="color:#75715e"># GPU-powered terminal (replacement for iTerm)</span>
-cask <span style="color:#d88200">&#34;anaconda&#34;</span>
-cask <span style="color:#d88200">&#34;authy&#34;</span>
-cask <span style="color:#d88200">&#34;dashlane&#34;</span>
-cask <span style="color:#d88200">&#34;discord&#34;</span>
-cask <span style="color:#d88200">&#34;figma&#34;</span>
-cask <span style="color:#d88200">&#34;firefox-developer-edition&#34;</span>
-cask <span style="color:#d88200">&#34;font-fira-code-nerd-font&#34;</span>
-cask <span style="color:#d88200">&#34;font-hack-nerd-font&#34;</span>
-cask <span style="color:#d88200">&#34;google-chrome&#34;</span>
-cask <span style="color:#d88200">&#34;hazeover&#34;</span>
-cask <span style="color:#d88200">&#34;iina&#34;</span>
-cask <span style="color:#d88200">&#34;insomnia&#34;</span>
-cask <span style="color:#d88200">&#34;intellij-idea&#34;</span>
-cask <span style="color:#d88200">&#34;iterm2&#34;</span>
-cask <span style="color:#d88200">&#34;keepingyouawake&#34;</span>
-cask <span style="color:#d88200">&#34;keka&#34;</span>
-cask <span style="color:#d88200">&#34;keycastr&#34;</span>
-cask <span style="color:#d88200">&#34;logitech-options&#34;</span>
-cask <span style="color:#d88200">&#34;lulu&#34;</span>
-cask <span style="color:#d88200">&#34;microsoft-auto-update&#34;</span>
-cask <span style="color:#d88200">&#34;microsoft-edge&#34;</span>
-cask <span style="color:#d88200">&#34;mockoon&#34;</span>
-cask <span style="color:#d88200">&#34;mysqlworkbench&#34;</span>
-cask <span style="color:#d88200">&#34;openkey&#34;</span>
-cask <span style="color:#d88200">&#34;opera&#34;</span>
-cask <span style="color:#d88200">&#34;pock&#34;</span>
-cask <span style="color:#d88200">&#34;postman&#34;</span>
-cask <span style="color:#d88200">&#34;proxyman&#34;</span>
-cask <span style="color:#d88200">&#34;rar&#34;</span>
-cask <span style="color:#d88200">&#34;rectangle&#34;</span>
-cask <span style="color:#d88200">&#34;skype&#34;</span>
-cask <span style="color:#d88200">&#34;slack&#34;</span>
-cask <span style="color:#d88200">&#34;spotify&#34;</span>
-cask <span style="color:#d88200">&#34;steam&#34;</span>
-cask <span style="color:#d88200">&#34;teamviewer&#34;</span>
-cask <span style="color:#d88200">&#34;telegram&#34;</span>
-cask <span style="color:#d88200">&#34;textmate&#34;</span>
-cask <span style="color:#d88200">&#34;tor-browser&#34;</span>
-cask <span style="color:#d88200">&#34;tower&#34;</span>
-cask <span style="color:#d88200">&#34;typora&#34;</span>
-cask <span style="color:#d88200">&#34;visual-studio-code&#34;</span>
-cask <span style="color:#d88200">&#34;zalo&#34;</span>
-mas <span style="color:#d88200">&#34;Messenger&#34;</span>, id: <span style="color:#ae81ff">1480068668</span>
-mas <span style="color:#d88200">&#34;RunCat&#34;</span>, id: <span style="color:#ae81ff">1429033973</span>
-mas <span style="color:#d88200">&#34;Shazam&#34;</span>, id: <span style="color:#ae81ff">897118787</span>
-</code></pre></div><p>Now at this point, your computer is good to go. But I will not stop at there, i got a few more things to do.</p>
+</code></pre></td></tr></table>
+</div>
+</div><p>Or you can create your own <code>Brewfile</code>. Let take a look at what is in mine:</p>
+<div class="highlight"><div style="color:#8a8a8a;background-color:#1c1c1c;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#8a8a8a;background-color:#1c1c1c;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#454545"> 1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#454545"> 2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#454545"> 3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#454545"> 4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#454545"> 5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#454545"> 6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#454545"> 7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#454545"> 8
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#454545"> 9
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#454545">10
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#454545">11
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#454545">12
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#454545">13
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#454545">14
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#454545">15
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#454545">16
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#454545">17
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#454545">18
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#454545">19
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#454545">20
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#454545">21
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#454545">22
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#454545">23
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#454545">24
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#454545">25
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#454545">26
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#454545">27
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#454545">28
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#454545">29
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#454545">30
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#454545">31
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#454545">32
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#454545">33
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#454545">34
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#454545">35
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#454545">36
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#454545">37
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#454545">38
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#454545">39
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#454545">40
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#454545">41
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#454545">42
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#454545">43
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#454545">44
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#454545">45
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#454545">46
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#454545">47
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#454545">48
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#454545">49
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#454545">50
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#454545">51
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#454545">52
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#454545">53
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#454545">54
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#454545">55
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#454545">56
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#454545">57
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#454545">58
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#454545">59
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#454545">60
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#454545">61
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#454545">62
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#454545">63
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#454545">64
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#454545">65
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#454545">66
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#454545">67
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#454545">68
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#454545">69
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#454545">70
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#454545">71
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#454545">72
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#454545">73
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#454545">74
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#454545">75
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#454545">76
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#454545">77
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#454545">78
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#454545">79
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#454545">80
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#454545">81
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#454545">82
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#454545">83
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#454545">84
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#454545">85
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#454545">86
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#454545">87
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#454545">88
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#454545">89
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#454545">90
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#454545">91
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#454545">92
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#454545">93
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="color:#8a8a8a;background-color:#1c1c1c;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">tap <span style="color:#00afaf">&#34;homebrew/bundle&#34;</span>
+tap <span style="color:#00afaf">&#34;homebrew/cask&#34;</span>
+tap <span style="color:#00afaf">&#34;homebrew/cask-drivers&#34;</span>
+tap <span style="color:#00afaf">&#34;homebrew/cask-fonts&#34;</span>
+tap <span style="color:#00afaf">&#34;homebrew/cask-versions&#34;</span>
+tap <span style="color:#00afaf">&#34;homebrew/core&#34;</span>
+tap <span style="color:#00afaf">&#34;homebrew/services&#34;</span>
+tap <span style="color:#00afaf">&#34;homebrew/test-bot&#34;</span>
+tap <span style="color:#00afaf">&#34;rigellute/tap&#34;</span> <span style="color:#4e4e4e"># These are &#39;tap&#39;, used to extend the formulae of homebrew</span>
+brew <span style="color:#00afaf">&#34;autojump&#34;</span> <span style="color:#4e4e4e"># A &#39;cd&#39; command that help you jump quickly to your desired location</span>
+brew <span style="color:#00afaf">&#34;bandwhich&#34;</span> <span style="color:#4e4e4e"># Monitor current network utilization</span>
+brew <span style="color:#00afaf">&#34;broot&#34;</span> <span style="color:#4e4e4e"># A replacement for treeview, search, ls, cs,….</span>
+brew <span style="color:#00afaf">&#34;coreutils&#34;</span> <span style="color:#4e4e4e"># Linux core utilities, because macos utilities have slightly different with linux in syntax,...</span>
+brew <span style="color:#00afaf">&#34;croc&#34;</span> <span style="color:#4e4e4e"># P2P file-transfer tool</span>
+brew <span style="color:#00afaf">&#34;gnutls&#34;</span> <span style="color:#4e4e4e"># GNU TLS</span>
+brew <span style="color:#00afaf">&#34;ffmpeg&#34;</span> <span style="color:#4e4e4e"># Playing with audio, video</span>
+brew <span style="color:#00afaf">&#34;findutils&#34;</span> <span style="color:#4e4e4e"># GNU find, xargs, and locate</span>
+brew <span style="color:#00afaf">&#34;fzf&#34;</span> <span style="color:#4e4e4e"># Fuzzy finder, play well with various of other tools</span>
+brew <span style="color:#00afaf">&#34;gawk&#34;</span> <span style="color:#4e4e4e"># GNU awk</span>
+brew <span style="color:#00afaf">&#34;git&#34;</span>
+brew <span style="color:#00afaf">&#34;git-lfs&#34;</span> <span style="color:#4e4e4e"># Store large files on git</span>
+brew <span style="color:#00afaf">&#34;gnu-getopt&#34;</span> <span style="color:#4e4e4e"># Linux util</span>
+brew <span style="color:#00afaf">&#34;gnu-indent&#34;</span> <span style="color:#4e4e4e"># Linux util</span>
+brew <span style="color:#00afaf">&#34;gnu-sed&#34;</span> <span style="color:#4e4e4e"># Linux util</span>
+brew <span style="color:#00afaf">&#34;gnu-tar&#34;</span> <span style="color:#4e4e4e"># Linux util</span>
+brew <span style="color:#00afaf">&#34;gnupg&#34;</span> <span style="color:#4e4e4e"># Support for GPG</span>
+brew <span style="color:#00afaf">&#34;go&#34;</span>
+brew <span style="color:#00afaf">&#34;gradle&#34;</span>
+brew <span style="color:#00afaf">&#34;grep&#34;</span> <span style="color:#4e4e4e"># GNU grep, egrep and fgrep</span>
+brew <span style="color:#00afaf">&#34;hstr&#34;</span>
+brew <span style="color:#00afaf">&#34;htop&#34;</span> <span style="color:#4e4e4e"># Improved &#39;top&#39;</span>
+brew <span style="color:#00afaf">&#34;hugo&#34;</span>
+brew <span style="color:#00afaf">&#34;imagemagick&#34;</span>
+brew <span style="color:#00afaf">&#34;libpq&#34;</span>
+brew <span style="color:#00afaf">&#34;mas&#34;</span> <span style="color:#4e4e4e"># Support for install app store app with cli</span>
+brew <span style="color:#00afaf">&#34;moreutils&#34;</span> <span style="color:#4e4e4e"># More UNIX util</span>
+brew <span style="color:#00afaf">&#34;neofetch&#34;</span> <span style="color:#4e4e4e"># Display os info</span>
+brew <span style="color:#00afaf">&#34;nmap&#34;</span> <span style="color:#4e4e4e"># Port scaning</span>
+brew <span style="color:#00afaf">&#34;nvm&#34;</span>
+brew <span style="color:#00afaf">&#34;spotify-tui&#34;</span> <span style="color:#4e4e4e"># Spotify in terminal</span>
+brew <span style="color:#00afaf">&#34;spotifyd&#34;</span> <span style="color:#4e4e4e"># Spotify daemon</span>
+brew <span style="color:#00afaf">&#34;sqlmap&#34;</span> <span style="color:#4e4e4e"># Scaning for SQL Injection</span>
+brew <span style="color:#00afaf">&#34;tldr&#34;</span> <span style="color:#4e4e4e"># Improved &#39;man&#39;</span>
+brew <span style="color:#00afaf">&#34;tmux&#34;</span>
+brew <span style="color:#00afaf">&#34;tokei&#34;</span> <span style="color:#4e4e4e"># Count code</span>
+brew <span style="color:#00afaf">&#34;wget&#34;</span>
+brew <span style="color:#00afaf">&#34;wifi-password&#34;</span>
+cask <span style="color:#00afaf">&#34;alacritty&#34;</span> <span style="color:#4e4e4e"># GPU-powered terminal (replacement for iTerm)</span>
+cask <span style="color:#00afaf">&#34;anaconda&#34;</span>
+cask <span style="color:#00afaf">&#34;authy&#34;</span>
+cask <span style="color:#00afaf">&#34;dashlane&#34;</span>
+cask <span style="color:#00afaf">&#34;discord&#34;</span>
+cask <span style="color:#00afaf">&#34;figma&#34;</span>
+cask <span style="color:#00afaf">&#34;firefox-developer-edition&#34;</span>
+cask <span style="color:#00afaf">&#34;font-fira-code-nerd-font&#34;</span>
+cask <span style="color:#00afaf">&#34;font-hack-nerd-font&#34;</span>
+cask <span style="color:#00afaf">&#34;google-chrome&#34;</span>
+cask <span style="color:#00afaf">&#34;hazeover&#34;</span>
+cask <span style="color:#00afaf">&#34;iina&#34;</span>
+cask <span style="color:#00afaf">&#34;insomnia&#34;</span>
+cask <span style="color:#00afaf">&#34;intellij-idea&#34;</span>
+cask <span style="color:#00afaf">&#34;iterm2&#34;</span>
+cask <span style="color:#00afaf">&#34;keepingyouawake&#34;</span>
+cask <span style="color:#00afaf">&#34;keka&#34;</span>
+cask <span style="color:#00afaf">&#34;keycastr&#34;</span>
+cask <span style="color:#00afaf">&#34;logitech-options&#34;</span>
+cask <span style="color:#00afaf">&#34;lulu&#34;</span>
+cask <span style="color:#00afaf">&#34;microsoft-auto-update&#34;</span>
+cask <span style="color:#00afaf">&#34;microsoft-edge&#34;</span>
+cask <span style="color:#00afaf">&#34;mockoon&#34;</span>
+cask <span style="color:#00afaf">&#34;mysqlworkbench&#34;</span>
+cask <span style="color:#00afaf">&#34;openkey&#34;</span>
+cask <span style="color:#00afaf">&#34;opera&#34;</span>
+cask <span style="color:#00afaf">&#34;pock&#34;</span>
+cask <span style="color:#00afaf">&#34;postman&#34;</span>
+cask <span style="color:#00afaf">&#34;proxyman&#34;</span>
+cask <span style="color:#00afaf">&#34;rar&#34;</span>
+cask <span style="color:#00afaf">&#34;rectangle&#34;</span>
+cask <span style="color:#00afaf">&#34;skype&#34;</span>
+cask <span style="color:#00afaf">&#34;slack&#34;</span>
+cask <span style="color:#00afaf">&#34;spotify&#34;</span>
+cask <span style="color:#00afaf">&#34;steam&#34;</span>
+cask <span style="color:#00afaf">&#34;teamviewer&#34;</span>
+cask <span style="color:#00afaf">&#34;telegram&#34;</span>
+cask <span style="color:#00afaf">&#34;textmate&#34;</span>
+cask <span style="color:#00afaf">&#34;tor-browser&#34;</span>
+cask <span style="color:#00afaf">&#34;tower&#34;</span>
+cask <span style="color:#00afaf">&#34;typora&#34;</span>
+cask <span style="color:#00afaf">&#34;visual-studio-code&#34;</span>
+cask <span style="color:#00afaf">&#34;zalo&#34;</span>
+mas <span style="color:#00afaf">&#34;Messenger&#34;</span>, id: <span style="color:#00afaf">1480068668</span>
+mas <span style="color:#00afaf">&#34;RunCat&#34;</span>, id: <span style="color:#00afaf">1429033973</span>
+mas <span style="color:#00afaf">&#34;Shazam&#34;</span>, id: <span style="color:#00afaf">897118787</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>Now at this point, your computer is good to go. But I will not stop at there, i got a few more things to do.</p>
 <h2 id="configurations">Configurations</h2>
 <h3 id="import-ssh-keys-gpg-keys">Import SSH Keys, GPG Keys</h3>
 <p>In case you don&rsquo;t know: In simple words: SSH is for authentication, GPG is for authorization (sign).</p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">sudo mkdir ~/.ssh <span style="color:#111">&amp;</span> sudo vi ~/.ssh/id_rsa
-chmod <span style="color:#ae81ff">600</span> ~/.ssh/id_rsa
+<div class="highlight"><div style="color:#8a8a8a;background-color:#1c1c1c;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#8a8a8a;background-color:#1c1c1c;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#454545">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#454545">2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#454545">3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#454545">4
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="color:#8a8a8a;background-color:#1c1c1c;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">sudo mkdir ~/.ssh &amp; sudo vi ~/.ssh/id_rsa
+chmod <span style="color:#00afaf">600</span> ~/.ssh/id_rsa
 gpg —-import /path/to/public-key-backup
 gpg —-import /path/to/secret-key-backup
-</code></pre></div><h3 id="config-for-git">Config for git</h3>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">git config --global user.name <span style="color:#d88200">&#34;Your Name Here&#34;</span>
-git config --global user.email <span style="color:#d88200">&#34;your_email@youremail.com&#34;</span>
-git config --global user.signingkey <span style="color:#d88200">&#34;yourgpgkey&#34;</span> <span style="color:#75715e"># if you use gpg signing</span>
-git config --global commit.gpgsign <span style="color:#111">true</span> <span style="color:#75715e"># if you use gpg signing</span>
-git config --global help.autocorrect <span style="color:#ae81ff">1</span>
-</code></pre></div><h3 id="config-for-zsh-z-shell">Config for zsh (Z-shell)</h3>
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="config-for-git">Config for git</h3>
+<div class="highlight"><div style="color:#8a8a8a;background-color:#1c1c1c;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#8a8a8a;background-color:#1c1c1c;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#454545">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#454545">2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#454545">3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#454545">4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#454545">5
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="color:#8a8a8a;background-color:#1c1c1c;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">git config --global user.name <span style="color:#00afaf">&#34;Your Name Here&#34;</span>
+git config --global user.email <span style="color:#00afaf">&#34;your_email@youremail.com&#34;</span>
+git config --global user.signingkey <span style="color:#00afaf">&#34;yourgpgkey&#34;</span> <span style="color:#4e4e4e"># if you use gpg signing</span>
+git config --global commit.gpgsign <span style="color:#0087ff">true</span> <span style="color:#4e4e4e"># if you use gpg signing</span>
+git config --global help.autocorrect <span style="color:#00afaf">1</span>
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="config-for-zsh-z-shell">Config for zsh (Z-shell)</h3>
 <p><code>zsh</code> is now the official default shell of macOS. I have <a href="https://github.com/huynhducduy/dotfiles/blob/master/.zshrc">my .zshrc file here</a> which is work perfectly with all above configuration.</p>
 <p>I used <code>oh-my-zsh</code> which is a framework for manage zsh, along with some plugins (you can find in the .zshrc file).</p>
 <p>This command will install <code>oh-my-zsh</code> and the plugins</p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">sh -c <span style="color:#d88200">&#34;</span><span style="color:#00a8c8">$(</span>curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh<span style="color:#00a8c8">)</span><span style="color:#d88200">&#34;</span>
-git clone https://github.com/TamCore/autoupdate-oh-my-zsh-plugins <span style="color:#111">$ZSH_CUSTOM</span>/plugins/autoupdate
+<div class="highlight"><div style="color:#8a8a8a;background-color:#1c1c1c;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#8a8a8a;background-color:#1c1c1c;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#454545">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#454545">2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#454545">3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#454545">4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#454545">5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#454545">6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#454545">7
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="color:#8a8a8a;background-color:#1c1c1c;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">sh -c <span style="color:#00afaf">&#34;</span><span style="color:#5f8700">$(</span>curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh<span style="color:#5f8700">)</span><span style="color:#00afaf">&#34;</span>
+git clone https://github.com/TamCore/autoupdate-oh-my-zsh-plugins <span style="color:#0087ff">$ZSH_CUSTOM</span>/plugins/autoupdate
 git clone https://github.com/Aloxaf/fzf-tab ~ZSH_CUSTOM/plugins/fzf-tab
-git clone https://github.com/zsh-users/zsh-completions <span style="color:#d88200">${</span><span style="color:#111">ZSH_CUSTOM</span><span style="color:#111">:=~/.oh-my-zsh/custom</span><span style="color:#d88200">}</span>/plugins/zsh-completions
-git clone https://github.com/zsh-users/zsh-syntax-highlighting.git <span style="color:#d88200">${</span><span style="color:#111">ZSH_CUSTOM</span><span style="color:#00a8c8">:-</span><span style="color:#111">~/.oh-my-zsh/custom</span><span style="color:#d88200">}</span>/plugins/zsh-syntax-highlighting
-git clone https://github.com/zsh-users/zsh-autosuggestions <span style="color:#d88200">${</span><span style="color:#111">ZSH_CUSTOM</span><span style="color:#00a8c8">:-</span><span style="color:#111">~/.oh-my-zsh/custom</span><span style="color:#d88200">}</span>/plugins/zsh-autosuggestions
-git clone https://github.com/zsh-users/zsh-history-substring-search <span style="color:#d88200">${</span><span style="color:#111">ZSH_CUSTOM</span><span style="color:#00a8c8">:-</span><span style="color:#111">~/.oh-my-zsh/custom</span><span style="color:#d88200">}</span>/plugins/zsh-history-substring-search
-</code></pre></div><p>After saving the <code>.zshrc</code> file, you gotta <code>source ~/.zshrc</code> to get it work.</p>
+git clone https://github.com/zsh-users/zsh-completions <span style="color:#00afaf">${</span><span style="color:#0087ff">ZSH_CUSTOM</span>:=~/.oh-my-zsh/custom<span style="color:#00afaf">}</span>/plugins/zsh-completions
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git <span style="color:#00afaf">${</span><span style="color:#0087ff">ZSH_CUSTOM</span><span style="color:#5f8700">:-</span>~/.oh-my-zsh/custom<span style="color:#00afaf">}</span>/plugins/zsh-syntax-highlighting
+git clone https://github.com/zsh-users/zsh-autosuggestions <span style="color:#00afaf">${</span><span style="color:#0087ff">ZSH_CUSTOM</span><span style="color:#5f8700">:-</span>~/.oh-my-zsh/custom<span style="color:#00afaf">}</span>/plugins/zsh-autosuggestions
+git clone https://github.com/zsh-users/zsh-history-substring-search <span style="color:#00afaf">${</span><span style="color:#0087ff">ZSH_CUSTOM</span><span style="color:#5f8700">:-</span>~/.oh-my-zsh/custom<span style="color:#00afaf">}</span>/plugins/zsh-history-substring-search
+</code></pre></td></tr></table>
+</div>
+</div><p>After saving the <code>.zshrc</code> file, you gotta <code>source ~/.zshrc</code> to get it work.</p>
 <h3 id="install-nodejs">Install nodejs</h3>
 <p>And <code>yarn</code> too, with the help of <code>nvm</code> (installed using brew)</p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">nvm install --lts
-nvm install <span style="color:#ae81ff">15</span>
-nvm <span style="color:#111">alias</span> default <span style="color:#ae81ff">15</span>
+<div class="highlight"><div style="color:#8a8a8a;background-color:#1c1c1c;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#8a8a8a;background-color:#1c1c1c;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#454545">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#454545">2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#454545">3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#454545">4
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="color:#8a8a8a;background-color:#1c1c1c;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">nvm install --lts
+nvm install <span style="color:#00afaf">15</span>
+nvm <span style="color:#0087ff">alias</span> default <span style="color:#00afaf">15</span>
 npm install -g yarn
-</code></pre></div><h3 id="alacritty--tmux-config">Alacritty &amp; Tmux config</h3>
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="alacritty--tmux-config">Alacritty &amp; Tmux config</h3>
 <p>A short while ago, i switched from <code>iTerm</code> to <code>Alacritty</code>. Why? Because:</p>
 <ul>
 <li>Alacritty is fast (written in Rust), GPU-Accelerated</li>
@@ -422,184 +587,372 @@ npm install -g yarn
 </ul>
 <p>But alacritty don&rsquo;t come with tab manager,&hellip; like iTerm, which lead me to the use of Tmux - a terminal multiplexer.</p>
 <p>This is my alacritty config</p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#f92672">font</span><span style="color:#111">:</span>
-  <span style="color:#f92672">size</span><span style="color:#111">:</span> <span style="color:#ae81ff">12</span>
-  <span style="color:#f92672">normal</span><span style="color:#111">:</span>
-    <span style="color:#f92672">family</span><span style="color:#111">:</span> <span style="color:#d88200">&#34;Hack Nerd Font Mono&#34;</span>
-  <span style="color:#f92672">use_thin_strokes</span><span style="color:#111">:</span> <span style="color:#00a8c8">true</span>
-<span style="color:#75715e"># Colors (Base16 Default Dark)</span>
-<span style="color:#f92672">colors</span><span style="color:#111">:</span>
-  <span style="color:#75715e"># Default colors</span>
-  <span style="color:#f92672">primary</span><span style="color:#111">:</span>
-    <span style="color:#f92672">background</span><span style="color:#111">:</span> <span style="color:#d88200">&#34;#181818&#34;</span>
-    <span style="color:#f92672">foreground</span><span style="color:#111">:</span> <span style="color:#d88200">&#34;#d8d8d8&#34;</span>
+<div class="highlight"><div style="color:#8a8a8a;background-color:#1c1c1c;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#8a8a8a;background-color:#1c1c1c;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#454545">  1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#454545">  2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#454545">  3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#454545">  4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#454545">  5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#454545">  6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#454545">  7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#454545">  8
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#454545">  9
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#454545"> 10
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#454545"> 11
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#454545"> 12
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#454545"> 13
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#454545"> 14
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#454545"> 15
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#454545"> 16
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#454545"> 17
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#454545"> 18
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#454545"> 19
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#454545"> 20
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#454545"> 21
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#454545"> 22
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#454545"> 23
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#454545"> 24
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#454545"> 25
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#454545"> 26
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#454545"> 27
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#454545"> 28
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#454545"> 29
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#454545"> 30
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#454545"> 31
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#454545"> 32
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#454545"> 33
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#454545"> 34
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#454545"> 35
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#454545"> 36
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#454545"> 37
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#454545"> 38
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#454545"> 39
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#454545"> 40
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#454545"> 41
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#454545"> 42
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#454545"> 43
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#454545"> 44
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#454545"> 45
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#454545"> 46
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#454545"> 47
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#454545"> 48
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#454545"> 49
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#454545"> 50
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#454545"> 51
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#454545"> 52
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#454545"> 53
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#454545"> 54
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#454545"> 55
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#454545"> 56
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#454545"> 57
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#454545"> 58
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#454545"> 59
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#454545"> 60
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#454545"> 61
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#454545"> 62
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#454545"> 63
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#454545"> 64
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#454545"> 65
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#454545"> 66
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#454545"> 67
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#454545"> 68
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#454545"> 69
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#454545"> 70
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#454545"> 71
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#454545"> 72
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#454545"> 73
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#454545"> 74
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#454545"> 75
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#454545"> 76
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#454545"> 77
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#454545"> 78
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#454545"> 79
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#454545"> 80
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#454545"> 81
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#454545"> 82
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#454545"> 83
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#454545"> 84
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#454545"> 85
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#454545"> 86
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#454545"> 87
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#454545"> 88
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#454545"> 89
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#454545"> 90
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#454545"> 91
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#454545"> 92
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#454545"> 93
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#454545"> 94
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#454545"> 95
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#454545"> 96
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#454545"> 97
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#454545"> 98
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#454545"> 99
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#454545">100
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#454545">101
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#454545">102
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#454545">103
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#454545">104
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#454545">105
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#454545">106
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#454545">107
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#454545">108
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#454545">109
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#454545">110
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#454545">111
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#454545">112
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#454545">113
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#454545">114
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#454545">115
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#454545">116
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#454545">117
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#454545">118
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#454545">119
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#454545">120
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#454545">121
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#454545">122
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="color:#8a8a8a;background-color:#1c1c1c;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#0087ff">font</span>:
+  <span style="color:#0087ff">size</span>: <span style="color:#00afaf">12</span>
+  <span style="color:#0087ff">normal</span>:
+    <span style="color:#0087ff">family</span>: <span style="color:#00afaf">&#34;Hack Nerd Font Mono&#34;</span>
+  <span style="color:#0087ff">use_thin_strokes</span>: <span style="color:#d75f00">true</span>
+<span style="color:#4e4e4e"># Colors (Base16 Default Dark)</span>
+<span style="color:#0087ff">colors</span>:
+  <span style="color:#4e4e4e"># Default colors</span>
+  <span style="color:#0087ff">primary</span>:
+    <span style="color:#0087ff">background</span>: <span style="color:#00afaf">&#34;#181818&#34;</span>
+    <span style="color:#0087ff">foreground</span>: <span style="color:#00afaf">&#34;#d8d8d8&#34;</span>
 
-  <span style="color:#75715e"># Colors the cursor will use if `custom_cursor_colors` is true</span>
-  <span style="color:#f92672">cursor</span><span style="color:#111">:</span>
-    <span style="color:#f92672">text</span><span style="color:#111">:</span> <span style="color:#d88200">&#34;#d8d8d8&#34;</span>
-    <span style="color:#f92672">cursor</span><span style="color:#111">:</span> <span style="color:#d88200">&#34;#d8d8d8&#34;</span>
+  <span style="color:#4e4e4e"># Colors the cursor will use if `custom_cursor_colors` is true</span>
+  <span style="color:#0087ff">cursor</span>:
+    <span style="color:#0087ff">text</span>: <span style="color:#00afaf">&#34;#d8d8d8&#34;</span>
+    <span style="color:#0087ff">cursor</span>: <span style="color:#00afaf">&#34;#d8d8d8&#34;</span>
 
-  <span style="color:#75715e"># Normal colors</span>
-  <span style="color:#f92672">normal</span><span style="color:#111">:</span>
-    <span style="color:#f92672">black</span><span style="color:#111">:</span> <span style="color:#d88200">&#34;#181818&#34;</span>
-    <span style="color:#f92672">red</span><span style="color:#111">:</span> <span style="color:#d88200">&#34;#ab4642&#34;</span>
-    <span style="color:#f92672">green</span><span style="color:#111">:</span> <span style="color:#d88200">&#34;#a1b56c&#34;</span>
-    <span style="color:#f92672">yellow</span><span style="color:#111">:</span> <span style="color:#d88200">&#34;#f7ca88&#34;</span>
-    <span style="color:#f92672">blue</span><span style="color:#111">:</span> <span style="color:#d88200">&#34;#7cafc2&#34;</span>
-    <span style="color:#f92672">magenta</span><span style="color:#111">:</span> <span style="color:#d88200">&#34;#ba8baf&#34;</span>
-    <span style="color:#f92672">cyan</span><span style="color:#111">:</span> <span style="color:#d88200">&#34;#86c1b9&#34;</span>
-    <span style="color:#f92672">white</span><span style="color:#111">:</span> <span style="color:#d88200">&#34;#d8d8d8&#34;</span>
+  <span style="color:#4e4e4e"># Normal colors</span>
+  <span style="color:#0087ff">normal</span>:
+    <span style="color:#0087ff">black</span>: <span style="color:#00afaf">&#34;#181818&#34;</span>
+    <span style="color:#0087ff">red</span>: <span style="color:#00afaf">&#34;#ab4642&#34;</span>
+    <span style="color:#0087ff">green</span>: <span style="color:#00afaf">&#34;#a1b56c&#34;</span>
+    <span style="color:#0087ff">yellow</span>: <span style="color:#00afaf">&#34;#f7ca88&#34;</span>
+    <span style="color:#0087ff">blue</span>: <span style="color:#00afaf">&#34;#7cafc2&#34;</span>
+    <span style="color:#0087ff">magenta</span>: <span style="color:#00afaf">&#34;#ba8baf&#34;</span>
+    <span style="color:#0087ff">cyan</span>: <span style="color:#00afaf">&#34;#86c1b9&#34;</span>
+    <span style="color:#0087ff">white</span>: <span style="color:#00afaf">&#34;#d8d8d8&#34;</span>
 
-  <span style="color:#75715e"># Bright colors</span>
-  <span style="color:#f92672">bright</span><span style="color:#111">:</span>
-    <span style="color:#f92672">black</span><span style="color:#111">:</span> <span style="color:#d88200">&#34;#585858&#34;</span>
-    <span style="color:#f92672">red</span><span style="color:#111">:</span> <span style="color:#d88200">&#34;#ab4642&#34;</span>
-    <span style="color:#f92672">green</span><span style="color:#111">:</span> <span style="color:#d88200">&#34;#a1b56c&#34;</span>
-    <span style="color:#f92672">yellow</span><span style="color:#111">:</span> <span style="color:#d88200">&#34;#f7ca88&#34;</span>
-    <span style="color:#f92672">blue</span><span style="color:#111">:</span> <span style="color:#d88200">&#34;#7cafc2&#34;</span>
-    <span style="color:#f92672">magenta</span><span style="color:#111">:</span> <span style="color:#d88200">&#34;#ba8baf&#34;</span>
-    <span style="color:#f92672">cyan</span><span style="color:#111">:</span> <span style="color:#d88200">&#34;#86c1b9&#34;</span>
-    <span style="color:#f92672">white</span><span style="color:#111">:</span> <span style="color:#d88200">&#34;#f8f8f8&#34;</span>
-<span style="color:#f92672">key_bindings</span><span style="color:#111">:</span>
-  - { <span style="color:#f92672">key: Home, chars</span><span style="color:#111">:</span> <span style="color:#d88200">&#34;\x1bOH&#34;</span><span style="color:#f92672">, mode</span><span style="color:#111">:</span> <span style="color:#ae81ff">AppCursor }</span>
-  - { <span style="color:#f92672">key: Home, chars</span><span style="color:#111">:</span> <span style="color:#d88200">&#34;\x1b[H&#34;</span><span style="color:#f92672">, mode</span><span style="color:#111">:</span> <span style="color:#ae81ff">~AppCursor }</span>
-  - { <span style="color:#f92672">key: End, chars</span><span style="color:#111">:</span> <span style="color:#d88200">&#34;\x1bOF&#34;</span><span style="color:#f92672">, mode</span><span style="color:#111">:</span> <span style="color:#ae81ff">AppCursor }</span>
-  - { <span style="color:#f92672">key: End, chars</span><span style="color:#111">:</span> <span style="color:#d88200">&#34;\x1b[F&#34;</span><span style="color:#f92672">, mode</span><span style="color:#111">:</span> <span style="color:#ae81ff">~AppCursor }</span>
-  - { <span style="color:#f92672">key: Equals, mods: Command, action</span><span style="color:#111">:</span> <span style="color:#ae81ff">IncreaseFontSize }</span>
-  - { <span style="color:#f92672">key: Minus, mods: Command, action</span><span style="color:#111">:</span> <span style="color:#ae81ff">DecreaseFontSize }</span>
-  - { <span style="color:#f92672">key: Minus, mods: Command|Shift, action</span><span style="color:#111">:</span> <span style="color:#ae81ff">ResetFontSize }</span>
-  - { <span style="color:#f92672">key: PageUp, mods: Shift, chars</span><span style="color:#111">:</span> <span style="color:#d88200">&#34;\x1b[5;2~&#34;</span> }
-  - { <span style="color:#f92672">key: PageUp, mods: Control, chars</span><span style="color:#111">:</span> <span style="color:#d88200">&#34;\x1b[5;5~&#34;</span> }
-  - { <span style="color:#f92672">key: PageUp, chars</span><span style="color:#111">:</span> <span style="color:#d88200">&#34;\x1b[5~&#34;</span> }
-  - { <span style="color:#f92672">key: PageDown, mods: Shift, chars</span><span style="color:#111">:</span> <span style="color:#d88200">&#34;\x1b[6;2~&#34;</span> }
-  - { <span style="color:#f92672">key: PageDown, mods: Control, chars</span><span style="color:#111">:</span> <span style="color:#d88200">&#34;\x1b[6;5~&#34;</span> }
-  - { <span style="color:#f92672">key: PageDown, chars</span><span style="color:#111">:</span> <span style="color:#d88200">&#34;\x1b[6~&#34;</span> }
-  - { <span style="color:#f92672">key: Left, mods: Shift, chars</span><span style="color:#111">:</span> <span style="color:#d88200">&#34;\x1b[1;2D&#34;</span> }
-  - { <span style="color:#f92672">key: Left, mods: Control, chars</span><span style="color:#111">:</span> <span style="color:#d88200">&#34;\x1b[1;5D&#34;</span> }
-  - { <span style="color:#f92672">key: Left, mods: Alt, chars</span><span style="color:#111">:</span> <span style="color:#d88200">&#34;\x1b[1;3D&#34;</span> }
-  - { <span style="color:#f92672">key: Left, chars</span><span style="color:#111">:</span> <span style="color:#d88200">&#34;\x1b[D&#34;</span><span style="color:#f92672">, mode</span><span style="color:#111">:</span> <span style="color:#ae81ff">~AppCursor }</span>
-  - { <span style="color:#f92672">key: Left, chars</span><span style="color:#111">:</span> <span style="color:#d88200">&#34;\x1bOD&#34;</span><span style="color:#f92672">, mode</span><span style="color:#111">:</span> <span style="color:#ae81ff">AppCursor }</span>
-  - { <span style="color:#f92672">key: Right, mods: Shift, chars</span><span style="color:#111">:</span> <span style="color:#d88200">&#34;\x1b[1;2C&#34;</span> }
-  - { <span style="color:#f92672">key: Right, mods: Control, chars</span><span style="color:#111">:</span> <span style="color:#d88200">&#34;\x1b[1;5C&#34;</span> }
-  - { <span style="color:#f92672">key: Right, mods: Alt, chars</span><span style="color:#111">:</span> <span style="color:#d88200">&#34;\x1b[1;3C&#34;</span> }
-  - { <span style="color:#f92672">key: Right, chars</span><span style="color:#111">:</span> <span style="color:#d88200">&#34;\x1b[C&#34;</span><span style="color:#f92672">, mode</span><span style="color:#111">:</span> <span style="color:#ae81ff">~AppCursor }</span>
-  - { <span style="color:#f92672">key: Right, chars</span><span style="color:#111">:</span> <span style="color:#d88200">&#34;\x1bOC&#34;</span><span style="color:#f92672">, mode</span><span style="color:#111">:</span> <span style="color:#ae81ff">AppCursor }</span>
-  - { <span style="color:#f92672">key: Up, mods: Shift, chars</span><span style="color:#111">:</span> <span style="color:#d88200">&#34;\x1b[1;2A&#34;</span> }
-  - { <span style="color:#f92672">key: Up, mods: Control, chars</span><span style="color:#111">:</span> <span style="color:#d88200">&#34;\x1b[1;5A&#34;</span> }
-  - { <span style="color:#f92672">key: Up, mods: Alt, chars</span><span style="color:#111">:</span> <span style="color:#d88200">&#34;\x1b[1;3A&#34;</span> }
-  - { <span style="color:#f92672">key: Up, chars</span><span style="color:#111">:</span> <span style="color:#d88200">&#34;\x1b[A&#34;</span><span style="color:#f92672">, mode</span><span style="color:#111">:</span> <span style="color:#ae81ff">~AppCursor }</span>
-  - { <span style="color:#f92672">key: Up, chars</span><span style="color:#111">:</span> <span style="color:#d88200">&#34;\x1bOA&#34;</span><span style="color:#f92672">, mode</span><span style="color:#111">:</span> <span style="color:#ae81ff">AppCursor }</span>
-  - { <span style="color:#f92672">key: Down, mods: Shift, chars</span><span style="color:#111">:</span> <span style="color:#d88200">&#34;\x1b[1;2B&#34;</span> }
-  - { <span style="color:#f92672">key: Down, mods: Control, chars</span><span style="color:#111">:</span> <span style="color:#d88200">&#34;\x1b[1;5B&#34;</span> }
-  - { <span style="color:#f92672">key: Down, mods: Alt, chars</span><span style="color:#111">:</span> <span style="color:#d88200">&#34;\x1b[1;3B&#34;</span> }
-  - { <span style="color:#f92672">key: Down, chars</span><span style="color:#111">:</span> <span style="color:#d88200">&#34;\x1b[B&#34;</span><span style="color:#f92672">, mode</span><span style="color:#111">:</span> <span style="color:#ae81ff">~AppCursor }</span>
-  - { <span style="color:#f92672">key: Down, chars</span><span style="color:#111">:</span> <span style="color:#d88200">&#34;\x1bOB&#34;</span><span style="color:#f92672">, mode</span><span style="color:#111">:</span> <span style="color:#ae81ff">AppCursor }</span>
-  - { <span style="color:#f92672">key: Tab, mods: Shift, chars</span><span style="color:#111">:</span> <span style="color:#d88200">&#34;\x1b[Z&#34;</span> }
-  - { <span style="color:#f92672">key: F1, chars</span><span style="color:#111">:</span> <span style="color:#d88200">&#34;\x1bOP&#34;</span> }
-  - { <span style="color:#f92672">key: F2, chars</span><span style="color:#111">:</span> <span style="color:#d88200">&#34;\x1bOQ&#34;</span> }
-  - { <span style="color:#f92672">key: F3, chars</span><span style="color:#111">:</span> <span style="color:#d88200">&#34;\x1bOR&#34;</span> }
-  - { <span style="color:#f92672">key: F4, chars</span><span style="color:#111">:</span> <span style="color:#d88200">&#34;\x1bOS&#34;</span> }
-  - { <span style="color:#f92672">key: F5, chars</span><span style="color:#111">:</span> <span style="color:#d88200">&#34;\x1b[15~&#34;</span> }
-  - { <span style="color:#f92672">key: F6, chars</span><span style="color:#111">:</span> <span style="color:#d88200">&#34;\x1b[17~&#34;</span> }
-  - { <span style="color:#f92672">key: F7, chars</span><span style="color:#111">:</span> <span style="color:#d88200">&#34;\x1b[18~&#34;</span> }
-  - { <span style="color:#f92672">key: F8, chars</span><span style="color:#111">:</span> <span style="color:#d88200">&#34;\x1b[19~&#34;</span> }
-  - { <span style="color:#f92672">key: F9, chars</span><span style="color:#111">:</span> <span style="color:#d88200">&#34;\x1b[20~&#34;</span> }
-  - { <span style="color:#f92672">key: F10, chars</span><span style="color:#111">:</span> <span style="color:#d88200">&#34;\x1b[21~&#34;</span> }
-  - { <span style="color:#f92672">key: F11, chars</span><span style="color:#111">:</span> <span style="color:#d88200">&#34;\x1b[23~&#34;</span> }
-  - { <span style="color:#f92672">key: F12, chars</span><span style="color:#111">:</span> <span style="color:#d88200">&#34;\x1b[24~&#34;</span> }
-  - { <span style="color:#f92672">key: Back, chars</span><span style="color:#111">:</span> <span style="color:#d88200">&#34;\x7f&#34;</span> }
-  - { <span style="color:#f92672">key: Back, mods: Alt, chars</span><span style="color:#111">:</span> <span style="color:#d88200">&#34;\x1b\x7f&#34;</span> }
-  - { <span style="color:#f92672">key: Insert, chars</span><span style="color:#111">:</span> <span style="color:#d88200">&#34;\x1b[2~&#34;</span> }
-  - { <span style="color:#f92672">key: Delete, chars</span><span style="color:#111">:</span> <span style="color:#d88200">&#34;\x1b[3~&#34;</span> }
+  <span style="color:#4e4e4e"># Bright colors</span>
+  <span style="color:#0087ff">bright</span>:
+    <span style="color:#0087ff">black</span>: <span style="color:#00afaf">&#34;#585858&#34;</span>
+    <span style="color:#0087ff">red</span>: <span style="color:#00afaf">&#34;#ab4642&#34;</span>
+    <span style="color:#0087ff">green</span>: <span style="color:#00afaf">&#34;#a1b56c&#34;</span>
+    <span style="color:#0087ff">yellow</span>: <span style="color:#00afaf">&#34;#f7ca88&#34;</span>
+    <span style="color:#0087ff">blue</span>: <span style="color:#00afaf">&#34;#7cafc2&#34;</span>
+    <span style="color:#0087ff">magenta</span>: <span style="color:#00afaf">&#34;#ba8baf&#34;</span>
+    <span style="color:#0087ff">cyan</span>: <span style="color:#00afaf">&#34;#86c1b9&#34;</span>
+    <span style="color:#0087ff">white</span>: <span style="color:#00afaf">&#34;#f8f8f8&#34;</span>
+<span style="color:#0087ff">key_bindings</span>:
+  - { <span style="color:#0087ff">key: Home, chars</span>: <span style="color:#00afaf">&#34;\x1bOH&#34;</span><span style="color:#0087ff">, mode</span>: AppCursor }
+  - { <span style="color:#0087ff">key: Home, chars</span>: <span style="color:#00afaf">&#34;\x1b[H&#34;</span><span style="color:#0087ff">, mode</span>: ~AppCursor }
+  - { <span style="color:#0087ff">key: End, chars</span>: <span style="color:#00afaf">&#34;\x1bOF&#34;</span><span style="color:#0087ff">, mode</span>: AppCursor }
+  - { <span style="color:#0087ff">key: End, chars</span>: <span style="color:#00afaf">&#34;\x1b[F&#34;</span><span style="color:#0087ff">, mode</span>: ~AppCursor }
+  - { <span style="color:#0087ff">key: Equals, mods: Command, action</span>: IncreaseFontSize }
+  - { <span style="color:#0087ff">key: Minus, mods: Command, action</span>: DecreaseFontSize }
+  - { <span style="color:#0087ff">key: Minus, mods: Command|Shift, action</span>: ResetFontSize }
+  - { <span style="color:#0087ff">key: PageUp, mods: Shift, chars</span>: <span style="color:#00afaf">&#34;\x1b[5;2~&#34;</span> }
+  - { <span style="color:#0087ff">key: PageUp, mods: Control, chars</span>: <span style="color:#00afaf">&#34;\x1b[5;5~&#34;</span> }
+  - { <span style="color:#0087ff">key: PageUp, chars</span>: <span style="color:#00afaf">&#34;\x1b[5~&#34;</span> }
+  - { <span style="color:#0087ff">key: PageDown, mods: Shift, chars</span>: <span style="color:#00afaf">&#34;\x1b[6;2~&#34;</span> }
+  - { <span style="color:#0087ff">key: PageDown, mods: Control, chars</span>: <span style="color:#00afaf">&#34;\x1b[6;5~&#34;</span> }
+  - { <span style="color:#0087ff">key: PageDown, chars</span>: <span style="color:#00afaf">&#34;\x1b[6~&#34;</span> }
+  - { <span style="color:#0087ff">key: Left, mods: Shift, chars</span>: <span style="color:#00afaf">&#34;\x1b[1;2D&#34;</span> }
+  - { <span style="color:#0087ff">key: Left, mods: Control, chars</span>: <span style="color:#00afaf">&#34;\x1b[1;5D&#34;</span> }
+  - { <span style="color:#0087ff">key: Left, mods: Alt, chars</span>: <span style="color:#00afaf">&#34;\x1b[1;3D&#34;</span> }
+  - { <span style="color:#0087ff">key: Left, chars</span>: <span style="color:#00afaf">&#34;\x1b[D&#34;</span><span style="color:#0087ff">, mode</span>: ~AppCursor }
+  - { <span style="color:#0087ff">key: Left, chars</span>: <span style="color:#00afaf">&#34;\x1bOD&#34;</span><span style="color:#0087ff">, mode</span>: AppCursor }
+  - { <span style="color:#0087ff">key: Right, mods: Shift, chars</span>: <span style="color:#00afaf">&#34;\x1b[1;2C&#34;</span> }
+  - { <span style="color:#0087ff">key: Right, mods: Control, chars</span>: <span style="color:#00afaf">&#34;\x1b[1;5C&#34;</span> }
+  - { <span style="color:#0087ff">key: Right, mods: Alt, chars</span>: <span style="color:#00afaf">&#34;\x1b[1;3C&#34;</span> }
+  - { <span style="color:#0087ff">key: Right, chars</span>: <span style="color:#00afaf">&#34;\x1b[C&#34;</span><span style="color:#0087ff">, mode</span>: ~AppCursor }
+  - { <span style="color:#0087ff">key: Right, chars</span>: <span style="color:#00afaf">&#34;\x1bOC&#34;</span><span style="color:#0087ff">, mode</span>: AppCursor }
+  - { <span style="color:#0087ff">key: Up, mods: Shift, chars</span>: <span style="color:#00afaf">&#34;\x1b[1;2A&#34;</span> }
+  - { <span style="color:#0087ff">key: Up, mods: Control, chars</span>: <span style="color:#00afaf">&#34;\x1b[1;5A&#34;</span> }
+  - { <span style="color:#0087ff">key: Up, mods: Alt, chars</span>: <span style="color:#00afaf">&#34;\x1b[1;3A&#34;</span> }
+  - { <span style="color:#0087ff">key: Up, chars</span>: <span style="color:#00afaf">&#34;\x1b[A&#34;</span><span style="color:#0087ff">, mode</span>: ~AppCursor }
+  - { <span style="color:#0087ff">key: Up, chars</span>: <span style="color:#00afaf">&#34;\x1bOA&#34;</span><span style="color:#0087ff">, mode</span>: AppCursor }
+  - { <span style="color:#0087ff">key: Down, mods: Shift, chars</span>: <span style="color:#00afaf">&#34;\x1b[1;2B&#34;</span> }
+  - { <span style="color:#0087ff">key: Down, mods: Control, chars</span>: <span style="color:#00afaf">&#34;\x1b[1;5B&#34;</span> }
+  - { <span style="color:#0087ff">key: Down, mods: Alt, chars</span>: <span style="color:#00afaf">&#34;\x1b[1;3B&#34;</span> }
+  - { <span style="color:#0087ff">key: Down, chars</span>: <span style="color:#00afaf">&#34;\x1b[B&#34;</span><span style="color:#0087ff">, mode</span>: ~AppCursor }
+  - { <span style="color:#0087ff">key: Down, chars</span>: <span style="color:#00afaf">&#34;\x1bOB&#34;</span><span style="color:#0087ff">, mode</span>: AppCursor }
+  - { <span style="color:#0087ff">key: Tab, mods: Shift, chars</span>: <span style="color:#00afaf">&#34;\x1b[Z&#34;</span> }
+  - { <span style="color:#0087ff">key: F1, chars</span>: <span style="color:#00afaf">&#34;\x1bOP&#34;</span> }
+  - { <span style="color:#0087ff">key: F2, chars</span>: <span style="color:#00afaf">&#34;\x1bOQ&#34;</span> }
+  - { <span style="color:#0087ff">key: F3, chars</span>: <span style="color:#00afaf">&#34;\x1bOR&#34;</span> }
+  - { <span style="color:#0087ff">key: F4, chars</span>: <span style="color:#00afaf">&#34;\x1bOS&#34;</span> }
+  - { <span style="color:#0087ff">key: F5, chars</span>: <span style="color:#00afaf">&#34;\x1b[15~&#34;</span> }
+  - { <span style="color:#0087ff">key: F6, chars</span>: <span style="color:#00afaf">&#34;\x1b[17~&#34;</span> }
+  - { <span style="color:#0087ff">key: F7, chars</span>: <span style="color:#00afaf">&#34;\x1b[18~&#34;</span> }
+  - { <span style="color:#0087ff">key: F8, chars</span>: <span style="color:#00afaf">&#34;\x1b[19~&#34;</span> }
+  - { <span style="color:#0087ff">key: F9, chars</span>: <span style="color:#00afaf">&#34;\x1b[20~&#34;</span> }
+  - { <span style="color:#0087ff">key: F10, chars</span>: <span style="color:#00afaf">&#34;\x1b[21~&#34;</span> }
+  - { <span style="color:#0087ff">key: F11, chars</span>: <span style="color:#00afaf">&#34;\x1b[23~&#34;</span> }
+  - { <span style="color:#0087ff">key: F12, chars</span>: <span style="color:#00afaf">&#34;\x1b[24~&#34;</span> }
+  - { <span style="color:#0087ff">key: Back, chars</span>: <span style="color:#00afaf">&#34;\x7f&#34;</span> }
+  - { <span style="color:#0087ff">key: Back, mods: Alt, chars</span>: <span style="color:#00afaf">&#34;\x1b\x7f&#34;</span> }
+  - { <span style="color:#0087ff">key: Insert, chars</span>: <span style="color:#00afaf">&#34;\x1b[2~&#34;</span> }
+  - { <span style="color:#0087ff">key: Delete, chars</span>: <span style="color:#00afaf">&#34;\x1b[3~&#34;</span> }
 
-    <span style="color:#75715e"># shortcuts for tmux. the leader key is control-b (0x02)</span>
-  - { <span style="color:#f92672">key: W, mods: Command, chars</span><span style="color:#111">:</span> <span style="color:#d88200">&#34;\x02&amp;&#34;</span> } <span style="color:#75715e"># close tab (kill)</span>
-  - { <span style="color:#f92672">key: T, mods: Command, chars</span><span style="color:#111">:</span> <span style="color:#d88200">&#34;\x02c&#34;</span> } <span style="color:#75715e"># new tab</span>
-  - { <span style="color:#f92672">key: RBracket, mods: Command|Shift, chars</span><span style="color:#111">:</span> <span style="color:#d88200">&#34;\x02n&#34;</span> } <span style="color:#75715e"># select next tab</span>
-  - { <span style="color:#f92672">key: LBracket, mods: Command|Shift, chars</span><span style="color:#111">:</span> <span style="color:#d88200">&#34;\x02p&#34;</span> } <span style="color:#75715e"># select previous tab</span>
-  - { <span style="color:#f92672">key: RBracket, mods: Command, chars</span><span style="color:#111">:</span> <span style="color:#d88200">&#34;\x02o&#34;</span> } <span style="color:#75715e"># select next pane</span>
-  - { <span style="color:#f92672">key: LBracket, mods: Command, chars</span><span style="color:#111">:</span> <span style="color:#d88200">&#34;\x02;&#34;</span> } <span style="color:#75715e"># select last (previously used) pane</span>
-  - { <span style="color:#f92672">key: F, mods: Command, chars</span><span style="color:#111">:</span> <span style="color:#d88200">&#34;\x02/&#34;</span> } <span style="color:#75715e"># search (upwards) (see tmux.conf)</span>
-<span style="color:#f92672">mouse_bindings</span><span style="color:#111">:</span>
-  - { <span style="color:#f92672">mouse: Middle, action</span><span style="color:#111">:</span> <span style="color:#ae81ff">PasteSelection }</span>
-<span style="color:#f92672">cursor</span><span style="color:#111">:</span>
-  <span style="color:#f92672">style</span><span style="color:#111">:</span> <span style="color:#ae81ff">Beam</span>
-  <span style="color:#f92672">blinking</span><span style="color:#111">:</span> <span style="color:#00a8c8">On</span>
-  <span style="color:#f92672">blink_interval</span><span style="color:#111">:</span> <span style="color:#ae81ff">500</span>
-  <span style="color:#f92672">unfocused_hollow</span><span style="color:#111">:</span> <span style="color:#00a8c8">false</span>
-<span style="color:#f92672">live_config_reload</span><span style="color:#111">:</span> <span style="color:#00a8c8">true</span>
-<span style="color:#75715e"># shell:</span>
-<span style="color:#75715e"># program: /usr/local/bin/tmux</span>
-<span style="color:#75715e"># args:</span>
-<span style="color:#75715e">#   - -u # force UTF-8 in tmux</span>
-<span style="color:#f92672">window</span><span style="color:#111">:</span>
-  <span style="color:#f92672">padding</span><span style="color:#111">:</span>
-    <span style="color:#f92672">x</span><span style="color:#111">:</span> <span style="color:#ae81ff">10</span>
-    <span style="color:#f92672">y</span><span style="color:#111">:</span> <span style="color:#ae81ff">10</span>
-  <span style="color:#f92672">decorations</span><span style="color:#111">:</span> <span style="color:#ae81ff">buttonless</span>
-<span style="color:#f92672">scrolling</span><span style="color:#111">:</span>
-  <span style="color:#f92672">history</span><span style="color:#111">:</span> <span style="color:#ae81ff">10000</span>
-  <span style="color:#f92672">multiplier</span><span style="color:#111">:</span> <span style="color:#ae81ff">3</span>
-<span style="color:#f92672">bell</span><span style="color:#111">:</span>
-  <span style="color:#f92672">animation</span><span style="color:#111">:</span> <span style="color:#ae81ff">EaseOut</span>
-  <span style="color:#f92672">color</span><span style="color:#111">:</span> <span style="color:#d88200">&#34;0xffffff&#34;</span>
-  <span style="color:#f92672">duration</span><span style="color:#111">:</span> <span style="color:#ae81ff">200</span>
-</code></pre></div><p>And my tmux config</p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh"><span style="color:#75715e"># reload config file (change file location to your the tmux.conf you want to use)</span>
-<span style="color:#111">bind</span> r source-file ~/.tmux.conf
+    <span style="color:#4e4e4e"># shortcuts for tmux. the leader key is control-b (0x02)</span>
+  - { <span style="color:#0087ff">key: W, mods: Command, chars</span>: <span style="color:#00afaf">&#34;\x02&amp;&#34;</span> } <span style="color:#4e4e4e"># close tab (kill)</span>
+  - { <span style="color:#0087ff">key: T, mods: Command, chars</span>: <span style="color:#00afaf">&#34;\x02c&#34;</span> } <span style="color:#4e4e4e"># new tab</span>
+  - { <span style="color:#0087ff">key: RBracket, mods: Command|Shift, chars</span>: <span style="color:#00afaf">&#34;\x02n&#34;</span> } <span style="color:#4e4e4e"># select next tab</span>
+  - { <span style="color:#0087ff">key: LBracket, mods: Command|Shift, chars</span>: <span style="color:#00afaf">&#34;\x02p&#34;</span> } <span style="color:#4e4e4e"># select previous tab</span>
+  - { <span style="color:#0087ff">key: RBracket, mods: Command, chars</span>: <span style="color:#00afaf">&#34;\x02o&#34;</span> } <span style="color:#4e4e4e"># select next pane</span>
+  - { <span style="color:#0087ff">key: LBracket, mods: Command, chars</span>: <span style="color:#00afaf">&#34;\x02;&#34;</span> } <span style="color:#4e4e4e"># select last (previously used) pane</span>
+  - { <span style="color:#0087ff">key: F, mods: Command, chars</span>: <span style="color:#00afaf">&#34;\x02/&#34;</span> } <span style="color:#4e4e4e"># search (upwards) (see tmux.conf)</span>
+<span style="color:#0087ff">mouse_bindings</span>:
+  - { <span style="color:#0087ff">mouse: Middle, action</span>: PasteSelection }
+<span style="color:#0087ff">cursor</span>:
+  <span style="color:#0087ff">style</span>: Beam
+  <span style="color:#0087ff">blinking</span>: <span style="color:#d75f00">On</span>
+  <span style="color:#0087ff">blink_interval</span>: <span style="color:#00afaf">500</span>
+  <span style="color:#0087ff">unfocused_hollow</span>: <span style="color:#d75f00">false</span>
+<span style="color:#0087ff">live_config_reload</span>: <span style="color:#d75f00">true</span>
+<span style="color:#4e4e4e"># shell:</span>
+<span style="color:#4e4e4e"># program: /usr/local/bin/tmux</span>
+<span style="color:#4e4e4e"># args:</span>
+<span style="color:#4e4e4e">#   - -u # force UTF-8 in tmux</span>
+<span style="color:#0087ff">window</span>:
+  <span style="color:#0087ff">padding</span>:
+    <span style="color:#0087ff">x</span>: <span style="color:#00afaf">10</span>
+    <span style="color:#0087ff">y</span>: <span style="color:#00afaf">10</span>
+  <span style="color:#0087ff">decorations</span>: buttonless
+<span style="color:#0087ff">scrolling</span>:
+  <span style="color:#0087ff">history</span>: <span style="color:#00afaf">10000</span>
+  <span style="color:#0087ff">multiplier</span>: <span style="color:#00afaf">3</span>
+<span style="color:#0087ff">bell</span>:
+  <span style="color:#0087ff">animation</span>: EaseOut
+  <span style="color:#0087ff">color</span>: <span style="color:#00afaf">&#34;0xffffff&#34;</span>
+  <span style="color:#0087ff">duration</span>: <span style="color:#00afaf">200</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>And my tmux config</p>
+<div class="highlight"><div style="color:#8a8a8a;background-color:#1c1c1c;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#8a8a8a;background-color:#1c1c1c;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#454545"> 1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#454545"> 2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#454545"> 3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#454545"> 4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#454545"> 5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#454545"> 6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#454545"> 7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#454545"> 8
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#454545"> 9
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#454545">10
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#454545">11
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#454545">12
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#454545">13
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#454545">14
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#454545">15
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#454545">16
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#454545">17
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#454545">18
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#454545">19
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#454545">20
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#454545">21
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#454545">22
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#454545">23
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#454545">24
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#454545">25
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#454545">26
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#454545">27
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#454545">28
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#454545">29
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#454545">30
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#454545">31
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#454545">32
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#454545">33
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#454545">34
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#454545">35
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#454545">36
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#454545">37
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#454545">38
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#454545">39
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#454545">40
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#454545">41
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#454545">42
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#454545">43
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#454545">44
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#454545">45
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#454545">46
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#454545">47
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#454545">48
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#454545">49
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#454545">50
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#454545">51
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#454545">52
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#454545">53
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#454545">54
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="color:#8a8a8a;background-color:#1c1c1c;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh"><span style="color:#4e4e4e"># reload config file (change file location to your the tmux.conf you want to use)</span>
+<span style="color:#0087ff">bind</span> r source-file ~/.tmux.conf
 
-<span style="color:#75715e"># enable history</span>
-<span style="color:#111">set</span> -g history-limit <span style="color:#ae81ff">10000</span>
+<span style="color:#4e4e4e"># enable history</span>
+<span style="color:#0087ff">set</span> -g history-limit <span style="color:#00afaf">10000</span>
 
-<span style="color:#75715e"># enable mouse</span>
-<span style="color:#111">set</span> -g mouse on
+<span style="color:#4e4e4e"># enable mouse</span>
+<span style="color:#0087ff">set</span> -g mouse on
 
-<span style="color:#75715e"># enable UTF-8 support in status bar</span>
-<span style="color:#111">set</span> -gq status-utf8 on
+<span style="color:#4e4e4e"># enable UTF-8 support in status bar</span>
+<span style="color:#0087ff">set</span> -gq status-utf8 on
 
-<span style="color:#75715e"># start window index at 1 instead of 0</span>
-<span style="color:#111">set</span> -g base-index <span style="color:#ae81ff">1</span>
+<span style="color:#4e4e4e"># start window index at 1 instead of 0</span>
+<span style="color:#0087ff">set</span> -g base-index <span style="color:#00afaf">1</span>
 
-<span style="color:#75715e"># start pane index at 1 instead of 0</span>
-setw -g pane-base-index <span style="color:#ae81ff">1</span>
+<span style="color:#4e4e4e"># start pane index at 1 instead of 0</span>
+setw -g pane-base-index <span style="color:#00afaf">1</span>
 
-<span style="color:#75715e"># highlight window when it has new activity, bell, activity,...</span>
+<span style="color:#4e4e4e"># highlight window when it has new activity, bell, activity,...</span>
 setw -g monitor-activity on
-<span style="color:#111">set</span> -g visual-activity off
-<span style="color:#111">set</span> -g visual-bell off
-<span style="color:#111">set</span> -g visual-silence off
-<span style="color:#111">set</span> -g monitor-bell on
-<span style="color:#111">set</span> -g bell-action any
-<span style="color:#111">set</span> -g activity-action none
+<span style="color:#0087ff">set</span> -g visual-activity off
+<span style="color:#0087ff">set</span> -g visual-bell off
+<span style="color:#0087ff">set</span> -g visual-silence off
+<span style="color:#0087ff">set</span> -g monitor-bell on
+<span style="color:#0087ff">set</span> -g bell-action any
+<span style="color:#0087ff">set</span> -g activity-action none
 
-<span style="color:#75715e"># re-number windows when one is closed</span>
-<span style="color:#111">set</span> -g renumber-windows on
+<span style="color:#4e4e4e"># re-number windows when one is closed</span>
+<span style="color:#0087ff">set</span> -g renumber-windows on
 
-<span style="color:#75715e">#  modes</span>
-setw -g mode-style <span style="color:#d88200">&#39;fg=colour255 bg=colour235 bold&#39;</span>
+<span style="color:#4e4e4e">#  modes</span>
+setw -g mode-style <span style="color:#00afaf">&#39;fg=colour255 bg=colour235 bold&#39;</span>
 
-<span style="color:#75715e"># panes</span>
-<span style="color:#111">set</span> -g pane-border-style <span style="color:#d88200">&#39;fg=colour235 bg=colour0&#39;</span>
-<span style="color:#111">set</span> -g pane-active-border-style <span style="color:#d88200">&#39;bg=colour0 fg=colour1&#39;</span>
+<span style="color:#4e4e4e"># panes</span>
+<span style="color:#0087ff">set</span> -g pane-border-style <span style="color:#00afaf">&#39;fg=colour235 bg=colour0&#39;</span>
+<span style="color:#0087ff">set</span> -g pane-active-border-style <span style="color:#00afaf">&#39;bg=colour0 fg=colour1&#39;</span>
 
-<span style="color:#75715e"># statusbar</span>
-<span style="color:#111">set</span> -g status-position bottom
-<span style="color:#111">set</span> -g status-justify left
-<span style="color:#111">set</span> -g status-style <span style="color:#d88200">&#39;bg=colour235&#39;</span>
-<span style="color:#111">set</span> -g status-right <span style="color:#d88200">&#39;#[fg=colour240] %d %b %R &#39;</span>
-<span style="color:#111">set</span> -g status-left <span style="color:#d88200">&#39; #[fg=colour240][#S] &#39;</span>
+<span style="color:#4e4e4e"># statusbar</span>
+<span style="color:#0087ff">set</span> -g status-position bottom
+<span style="color:#0087ff">set</span> -g status-justify left
+<span style="color:#0087ff">set</span> -g status-style <span style="color:#00afaf">&#39;bg=colour235&#39;</span>
+<span style="color:#0087ff">set</span> -g status-right <span style="color:#00afaf">&#39;#[fg=colour240] %d %b %R &#39;</span>
+<span style="color:#0087ff">set</span> -g status-left <span style="color:#00afaf">&#39; #[fg=colour240][#S] &#39;</span>
 
-setw -g window-status-current-style <span style="color:#d88200">&#39;fg=colour235 bg=colour1 bold&#39;</span>
-setw -g window-status-current-format <span style="color:#d88200">&#39; #I#[fg=colour255] #[fg=colour255]#W &#39;</span>
+setw -g window-status-current-style <span style="color:#00afaf">&#39;fg=colour235 bg=colour1 bold&#39;</span>
+setw -g window-status-current-format <span style="color:#00afaf">&#39; #I#[fg=colour255] #[fg=colour255]#W &#39;</span>
 
-setw -g window-status-style <span style="color:#d88200">&#39;fg=colour245 bg=colour235&#39;</span>
-setw -g window-status-format <span style="color:#d88200">&#39; #I#[fg=colour255] #[fg=colour255]#W &#39;</span>
-setw -g window-status-activity-style <span style="color:#d88200">&#39;fg=colour1 bg=colour235 blink bold&#39;</span>
-setw -g window-status-bell-style <span style="color:#d88200">&#39;fg=colour1 bg=colour235 bold&#39;</span>
+setw -g window-status-style <span style="color:#00afaf">&#39;fg=colour245 bg=colour235&#39;</span>
+setw -g window-status-format <span style="color:#00afaf">&#39; #I#[fg=colour255] #[fg=colour255]#W &#39;</span>
+setw -g window-status-activity-style <span style="color:#00afaf">&#39;fg=colour1 bg=colour235 blink bold&#39;</span>
+setw -g window-status-bell-style <span style="color:#00afaf">&#39;fg=colour1 bg=colour235 bold&#39;</span>
 
-<span style="color:#75715e"># messages</span>
-<span style="color:#111">set</span> -g message-style <span style="color:#d88200">&#39;fg=colour255 bg=colour1&#39;</span>
-</code></pre></div><p>If you want further explaination, i will write another blog :D</p>
+<span style="color:#4e4e4e"># messages</span>
+<span style="color:#0087ff">set</span> -g message-style <span style="color:#00afaf">&#39;fg=colour255 bg=colour1&#39;</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>If you want further explaination, i will write another blog :D</p>
 <h2 id="result">Result</h2>
 <p>If you follow my steps, you will end up with:</p>
 <p><img src="/images/fresh-macos-install/result.png" alt="Result"></p>

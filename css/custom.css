@@ -20,7 +20,7 @@
 }
 
 .post-list .post-item:not(:last-child) {
-	border-bottom: 1px dashed black;
+	border-bottom: 1px dashed #2bbc8a;
 }
 
 .post-list .post-item .title {
@@ -71,4 +71,27 @@
 	border-radius: .25rem;
 	max-width: 100%;
 	max-height: 100%;
+}
+
+html::-webkit-scrollbar {
+  width: 10px;               /* width of the entire scrollbar */
+}
+
+html::-webkit-scrollbar-track {
+  background: #1d1f21;        /* color of the tracking area */
+}
+
+html::-webkit-scrollbar-thumb {
+  background-color: #2bbc8a;    /* color of the scroll thumb */
+  border-radius: 20px;       /* roundness of the scroll thumb */
+  border: 3px solid #2bbc8a;  /* creates padding around scroll thumb */
+}
+
+html {
+  scrollbar-width: auto;          /* "auto" or "thin" */
+  scrollbar-color: #2bbc8a #1d1f21;   /* scroll thumb and track */
+}
+
+html {
+	border-top: none;
 }
