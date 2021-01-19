@@ -44,15 +44,15 @@ weight = 5
     guessSyntax = false
     hl_Lines = ""
     lineNoStart = 1
-    lineNos = false
+    lineNos = true
     lineNumbersInTable = true
     noClasses = true
-    style = "monokailight"
+    style = "solarized-dark256"
     tabWidth = 4
 
 [params]
 	css = ["css/custom.css"]
-  colortheme = "white" # dark, light, white, or classic
+  colortheme = "dark" # dark, light, white, or classic
   rss = true
   googleAnalyticsAsync = true
 
