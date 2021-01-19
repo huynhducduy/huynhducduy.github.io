@@ -262,7 +262,7 @@ if (!doNotTrack) {
       <p>Many people afraid of reinstalling their computer, or change their computer, because there are just too many things, software installed. But not me, instead, I enjoy it.</p>
 <h2 id="how-can-i-enjoy-reinstalling-my-computer-over-and-over">How can I enjoy reinstalling my computer over and over?</h2>
 <p>Reinstall computer is not as hard as it seems, regardless of how many software that you have.</p>
-<p>There are a few things that you need to follow to make these progress easier:</p>
+<p>There are a few things that you need to follow to make this progress easier:</p>
 <ul>
 <li>Sync everything that you can sync to the cloud</li>
 <li>Be neat and clean, on your computer. Make sure you always put your files and folders in the place that its belongs to.</li>
@@ -271,10 +271,10 @@ if (!doNotTrack) {
 </ul>
 <h2 id="everything-backed-up-now-what">Everything Backed Up, now what?</h2>
 <p>Just to mention, i know that macos can be reinstall without losing any data. But you know what, i love the feeling of a fresh install, like, a brand new computer. So yeah, why not delete everything?</p>
-<p>There are many way to <a href="https://support.apple.com/en-us/HT204904">reinstall macos</a>, but i prefer <a href="https://support.apple.com/en-us/HT201372">using a bootable installer</a> (usb).</p>
+<p>There are many ways to <a href="https://support.apple.com/en-us/HT204904">reinstall macos</a>, but i prefer <a href="https://support.apple.com/en-us/HT201372">using a bootable installer</a> (usb).</p>
 <p>If you want a fresh install, like me, you will need to erase the disk in the install progress.</p>
 <h2 id="have-a-fresh-macos-what-to-do">Have a fresh macOS, what to do?</h2>
-<p>The first thing that i want to do, is to <strong>turn off SIP</strong> (System Integrity Protection (rootless) mode). It is a security feature that prevent changing root-level files even with the root password. Yeah, sounds awesome right? But, i&rsquo;m a developer, no one tell me what to do 😏</p>
+<p>The first thing that i want to do, is to <strong>turn off SIP</strong> (System Integrity Protection (rootless) mode). It is a security feature that prevents changing root-level files even with the root password. Yeah, sounds awesome right? But, i&rsquo;m a developer, no one tell me what to do 😏</p>
 <p>You may want to disable <code>Secure Boot</code> and <code>Gatekeeper</code> too. And like <code>SIP</code>, they are optional.</p>
 <h3 id="homebrew">Homebrew</h3>
 <p>Don&rsquo;t tell me that you don&rsquo;t know this name? The most famous package manager for macOS. Homebrew is the most important piece.</p>
@@ -296,9 +296,9 @@ if (!doNotTrack) {
 <pre style="color:#8a8a8a;background-color:#1c1c1c;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">/bin/bash -c <span style="color:#00afaf">&#34;</span><span style="color:#5f8700">$(</span>curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh<span style="color:#5f8700">)</span><span style="color:#00afaf">&#34;</span>
 </code></pre></td></tr></table>
 </div>
-</div><p>We are going to use <code>Homebrew bundle</code>, which let us install pretty much everything else, with just a <code>Brewfile</code> and a single command.</p>
+</div><p>We are going to use <code>Homebrew bundle</code>, which lets us install pretty much everything else, with just a <code>Brewfile</code> and a single command.</p>
 <p>And yes you&rsquo;re right, I do have my own <code>Brewfile</code> and you can use it. Check it out <a href="https://github.com/huynhducduy/dotfiles/blob/master/Brewfile">here</a>
-But before, you may want to <strong>login to &ldquo;App Store&rdquo;</strong> first, because with brew, you can even install app from App Store without manually click by yourself.</p>
+But before, you may want to <strong>login to &ldquo;App Store&rdquo;</strong> first, because with brew, you can even install the app from App Store without manually click by yourself.</p>
 <p>Now download my <code>Brewfile</code> and let the party (the installation) begin:</p>
 <div class="highlight"><div style="color:#8a8a8a;background-color:#1c1c1c;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
@@ -503,7 +503,7 @@ mas <span style="color:#00afaf">&#34;RunCat&#34;</span>, id: <span style="color:
 mas <span style="color:#00afaf">&#34;Shazam&#34;</span>, id: <span style="color:#00afaf">897118787</span>
 </code></pre></td></tr></table>
 </div>
-</div><p>Now at this point, your computer is good to go. But I will not stop at there, i got a few more things to do.</p>
+</div><p>Now at this point, your computer is good to go. But I will not stop there, i got a few more things to do.</p>
 <h2 id="configurations">Configurations</h2>
 <h3 id="import-ssh-keys-gpg-keys">Import SSH Keys, GPG Keys</h3>
 <p>In case you don&rsquo;t know: In simple words: SSH is for authentication, GPG is for authorization (sign).</p>
@@ -539,8 +539,8 @@ git config --global help.autocorrect <span style="color:#00afaf">1</span>
 </code></pre></td></tr></table>
 </div>
 </div><h3 id="config-for-zsh-z-shell">Config for zsh (Z-shell)</h3>
-<p><code>zsh</code> is now the official default shell of macOS. I have <a href="https://github.com/huynhducduy/dotfiles/blob/master/.zshrc">my .zshrc file here</a> which is work perfectly with all above configuration.</p>
-<p>I used <code>oh-my-zsh</code> which is a framework for manage zsh, along with some plugins (you can find in the .zshrc file).</p>
+<p><code>zsh</code> is now the official default shell of macOS. I have <a href="https://github.com/huynhducduy/dotfiles/blob/master/.zshrc">my .zshrc file here</a> which is works perfectly with all the above configuration.</p>
+<p>I used <code>oh-my-zsh</code> which is a framework for manage zsh, along with some plugins (you can find them in the .zshrc file).</p>
 <p>This command will install <code>oh-my-zsh</code> and the plugins</p>
 <div class="highlight"><div style="color:#8a8a8a;background-color:#1c1c1c;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
@@ -583,7 +583,7 @@ npm install -g yarn
 <p>A short while ago, i switched from <code>iTerm</code> to <code>Alacritty</code>. Why? Because:</p>
 <ul>
 <li>Alacritty is fast (written in Rust), GPU-Accelerated</li>
-<li>Alacritty is simple, it have only 1 configuration file</li>
+<li>Alacritty is simple, it has only 1 configuration file</li>
 </ul>
 <p>But alacritty don&rsquo;t come with tab manager,&hellip; like iTerm, which lead me to the use of Tmux - a terminal multiplexer.</p>
 <p>This is my alacritty config</p>
