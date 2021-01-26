@@ -31,7 +31,7 @@ Many people afraid of reinstalling their computer, or change their computer, bec
 
 Reinstall computer is not as hard as it seems, regardless of how many software that you have.
 
-There are a few things that you need to follow to make these progress easier:
+There are a few things that you need to follow to make this progress easier:
 
 - Sync everything that you can sync to the cloud
 - Be neat and clean, on your computer. Make sure you always put your files and folders in the place that its belongs to.
@@ -42,13 +42,13 @@ There are a few things that you need to follow to make these progress easier:
 
 Just to mention, i know that macos can be reinstall without losing any data. But you know what, i love the feeling of a fresh install, like, a brand new computer. So yeah, why not delete everything?
 
-There are many way to [reinstall macos](https://support.apple.com/en-us/HT204904), but i prefer [using a bootable installer](https://support.apple.com/en-us/HT201372) (usb).
+There are many ways to [reinstall macos](https://support.apple.com/en-us/HT204904), but i prefer [using a bootable installer](https://support.apple.com/en-us/HT201372) (usb).
 
 If you want a fresh install, like me, you will need to erase the disk in the install progress.
 
 ## Have a fresh macOS, what to do?
 
-The first thing that i want to do, is to **turn off SIP** (System Integrity Protection (rootless) mode). It is a security feature that prevent changing root-level files even with the root password. Yeah, sounds awesome right? But, i'm a developer, no one tell me what to do :smirk:
+The first thing that i want to do, is to **turn off SIP** (System Integrity Protection (rootless) mode). It is a security feature that prevents changing root-level files even with the root password. Yeah, sounds awesome right? But, i'm a developer, no one tell me what to do :smirk:
 
 You may want to disable `Secure Boot` and `Gatekeeper` too. And like `SIP`, they are optional.
 
@@ -68,10 +68,10 @@ Then install homebrew with:
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 ```
 
-We are going to use `Homebrew bundle`, which let us install pretty much everything else, with just a `Brewfile` and a single command.
+We are going to use `Homebrew bundle`, which lets us install pretty much everything else, with just a `Brewfile` and a single command.
 
 And yes you're right, I do have my own `Brewfile` and you can use it. Check it out [here](https://github.com/huynhducduy/dotfiles/blob/master/Brewfile)
-But before, you may want to **login to "App Store"** first, because with brew, you can even install app from App Store without manually click by yourself.
+But before, you may want to **login to "App Store"** first, because with brew, you can even install the app from App Store without manually click by yourself.
 
 Now download my `Brewfile` and let the party (the installation) begin:
 
@@ -178,7 +178,7 @@ mas "RunCat", id: 1429033973
 mas "Shazam", id: 897118787
 ```
 
-Now at this point, your computer is good to go. But I will not stop at there, i got a few more things to do.
+Now at this point, your computer is good to go. But I will not stop there, i got a few more things to do.
 
 ## Configurations
 
@@ -205,9 +205,9 @@ git config --global help.autocorrect 1
 
 ### Config for zsh (Z-shell)
 
-`zsh` is now the official default shell of macOS. I have [my .zshrc file here](https://github.com/huynhducduy/dotfiles/blob/master/.zshrc) which is work perfectly with all above configuration.
+`zsh` is now the official default shell of macOS. I have [my .zshrc file here](https://github.com/huynhducduy/dotfiles/blob/master/.zshrc) which is works perfectly with all the above configuration.
 
-I used `oh-my-zsh` which is a framework for manage zsh, along with some plugins (you can find in the .zshrc file).
+I used `oh-my-zsh` which is a framework for manage zsh, along with some plugins (you can find them in the .zshrc file).
 
 This command will install `oh-my-zsh` and the plugins
 
@@ -239,7 +239,7 @@ npm install -g yarn
 A short while ago, i switched from `iTerm` to `Alacritty`. Why? Because:
 
 - Alacritty is fast (written in Rust), GPU-Accelerated
-- Alacritty is simple, it have only 1 configuration file
+- Alacritty is simple, it has only 1 configuration file
 
 But alacritty don't come with tab manager,... like iTerm, which lead me to the use of Tmux - a terminal multiplexer.
 
