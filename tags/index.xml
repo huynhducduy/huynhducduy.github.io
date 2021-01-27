@@ -7,7 +7,43 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Huynh Duc Duy</copyright>
-    <lastBuildDate>Fri, 15 Jan 2021 23:49:08 +0700</lastBuildDate><atom:link href="https://huynhducduy.me/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 26 Jan 2021 15:47:50 +0700</lastBuildDate><atom:link href="https://huynhducduy.me/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>front-end</title>
+      <link>https://huynhducduy.me/tags/front-end/</link>
+      <pubDate>Tue, 26 Jan 2021 15:47:50 +0700</pubDate>
+      
+      <guid>https://huynhducduy.me/tags/front-end/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>snowpack</title>
+      <link>https://huynhducduy.me/tags/snowpack/</link>
+      <pubDate>Tue, 26 Jan 2021 15:47:50 +0700</pubDate>
+      
+      <guid>https://huynhducduy.me/tags/snowpack/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>unbundled development</title>
+      <link>https://huynhducduy.me/tags/unbundled-development/</link>
+      <pubDate>Tue, 26 Jan 2021 15:47:50 +0700</pubDate>
+      
+      <guid>https://huynhducduy.me/tags/unbundled-development/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>vite</title>
+      <link>https://huynhducduy.me/tags/vite/</link>
+      <pubDate>Tue, 26 Jan 2021 15:47:50 +0700</pubDate>
+      
+      <guid>https://huynhducduy.me/tags/vite/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>dotfiles</title>
       <link>https://huynhducduy.me/tags/dotfiles/</link>
