@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>macos on Duy&#39;s Notes</title>
+    <link>https://huynhducduy.me/tags/macos/</link>
+    <description>Recent content in macos on Duy&#39;s Notes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Huynh Duc Duy</copyright>
+    <lastBuildDate>Fri, 15 Jan 2021 23:49:08 +0700</lastBuildDate><atom:link href="https://huynhducduy.me/tags/macos/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Fresh macOS installation: From 0% to 100% ready for development in just a glance</title>
+      <link>https://huynhducduy.me/posts/fresh-macos-install/</link>
+      <pubDate>Fri, 15 Jan 2021 23:49:08 +0700</pubDate>
+      
+      <guid>https://huynhducduy.me/posts/fresh-macos-install/</guid>
+      <description>Many people afraid of reinstalling their computer, or change their computer, because there are just too many things, software installed.</description>
+    </item>
+    
+  </channel>
+</rss>

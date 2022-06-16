@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>vite on Duy&#39;s Notes</title>
+    <link>https://huynhducduy.me/tags/vite/</link>
+    <description>Recent content in vite on Duy&#39;s Notes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Huynh Duc Duy</copyright>
+    <lastBuildDate>Tue, 26 Jan 2021 15:47:50 +0700</lastBuildDate><atom:link href="https://huynhducduy.me/tags/vite/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>A Note on Vite and Snowpack: Unbundled Development</title>
+      <link>https://huynhducduy.me/posts/a-note-on-vite-snowpack-unbundled-development/</link>
+      <pubDate>Tue, 26 Jan 2021 15:47:50 +0700</pubDate>
+      
+      <guid>https://huynhducduy.me/posts/a-note-on-vite-snowpack-unbundled-development/</guid>
+      <description>Giới thiệu một chút về Vite và Snowpack Vite là một front-end build tool mới được phat triển bởi Evan You - creator của Vue.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,97 @@
+
+.post-list .post-item .description {
+	margin-top: 8px;
+	font-size: 0.9rem;
+	letter-spacing: -1.5px;
+	line-height: 1.2;
+    display: box;
+    display:-moz-box;
+	display:-webkit-box;
+	-webkit-line-clamp: 3;
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+}
+
+
+.post-list .post-item {
+	margin-top: 10px;
+	padding-bottom: 10px;
+	margin-bottom: 0 !important;
+}
+
+.post-list .post-item:not(:last-child) {
+	border-bottom: 1px dashed #2bbc8a;
+}
+
+.post-list .post-item .title {
+	font-weight: bold;
+}
+
+.post-list .post-item .meta {
+	max-width: 100%;
+	margin-right: 0 !important;
+}
+
+@media (min-width: 480px) {
+	.post-list .post-item .meta {
+		max-width: 120px;
+		margin-right: 15px !important;
+	}
+}
+
+@media (min-width: 768px) {
+	.post-list .post-item .meta {
+		max-width: 150px;
+		margin-right: 15px !important;
+	}
+}
+
+.post-list .post-item .time {
+	font-weight: 100;
+    letter-spacing: -1px;
+    font-style: oblique;
+}
+
+
+.post-list .post-item .thumbnail {
+	border-radius: .25rem;
+	object-fit: cover;
+	width: 100%;
+	height: 100%;
+	max-height: 100px;
+}
+
+@media (min-width: 480px) {
+	.post-list .post-item .thumbnail {
+		max-height: 100%;
+	}
+}
+
+.post .thumbnail {
+	border-radius: .25rem;
+	max-width: 100%;
+	max-height: 100%;
+}
+
+html::-webkit-scrollbar {
+  width: 10px;               /* width of the entire scrollbar */
+}
+
+html::-webkit-scrollbar-track {
+  background: #1d1f21;        /* color of the tracking area */
+}
+
+html::-webkit-scrollbar-thumb {
+  background-color: #2bbc8a;    /* color of the scroll thumb */
+  border-radius: 20px;       /* roundness of the scroll thumb */
+  border: 3px solid #2bbc8a;  /* creates padding around scroll thumb */
+}
+
+html {
+  scrollbar-width: auto;          /* "auto" or "thin" */
+  scrollbar-color: #2bbc8a #1d1f21;   /* scroll thumb and track */
+}
+
+html {
+	border-top: none;
+}
