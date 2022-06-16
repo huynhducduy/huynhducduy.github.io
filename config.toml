@@ -57,7 +57,7 @@ weight = 5
   googleAnalyticsAsync = true
 
   # Home page settings
-  description = "A final year university student, a software engineer who is passionate about web technologies and open source. I'm also a self procliamed internet surfer 🏄‍. Always learning new things, ready for discussions and making new projects."
+  description = "A software engineer who is passionate about web technologies and open source. Innovative, task-driven, detail-oriented perfectionism with 3+ years of experience in web development. I'm also a self-proclaimed internet surfer 🏄‍. Always learning new things, ready for tech debate and exicting projects."
   mainSection = "posts" # your main section
   showAllPostsOnHomePage = false # default
   postsOnHomePage = 10 # this option will be ignored if showAllPostsOnHomePage is set to true
